@@ -1,0 +1,204 @@
+/* HeroSection.module.css */
+
+.lpHeroSection {
+  position: relative;
+  z-index: 10;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.lpHeroBg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+.lpGradientX {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, #050505, rgba(5,5,5,0.6), transparent);
+  pointer-events: none;
+}
+
+.lpGradientY {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, #050505, transparent, transparent);
+  pointer-events: none;
+}
+
+.lpHeroContainer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 8rem 1.5rem; 
+}
+
+.lpHeroGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.lpHeroTextCol {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.lpHeroH1 {
+  font-weight: 600;
+  margin-bottom: 2rem;
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+}
+
+.lpHeroH1 span {
+  display: block;
+  font-size: 3rem; 
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  background-image: linear-gradient(to bottom right, var(--arc-accent), rgba(255,255,255,0.4));
+}
+
+.heroGradientText {
+  display: block;              
+  font-size: 3rem;           
+  line-height: 1;              
+  color: transparent;          
+  background-clip: text;      
+  -webkit-background-clip: text; 
+  background-image: linear-gradient(
+    to bottom right, 
+    #E5D9B6, 
+    rgba(255, 255, 255, 0.4)
+  );
+}
+
+.lpHeroP {
+  font-size: 1.25rem;
+  color: var(--arc-white-60);
+  max-width: 64rem;
+  margin-bottom: 3rem;
+  font-weight: 300;
+  line-height: 1.6;
+  backdrop-filter: blur(4px);
+}
+
+.lpHeroCtaCol {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  padding-bottom: 1.5rem;
+}
+
+.lpCtaWrapperBtn {
+  position: relative;
+  padding: 1px;
+  background: linear-gradient(to bottom right, var(--arc-white-10), transparent);
+  border-radius: 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+
+.lpCtaWrapperBtn:hover {
+  background: linear-gradient(to bottom right, rgba(229, 217, 182, 0.5), transparent);
+}
+
+.lpCtaWrapperBtn:hover .lpCtaInner {
+  border-color: rgba(229, 217, 182, 0.3);
+}
+
+.lpCtaWrapperBtn:hover .lpCtaIconBox {
+  transform: scale(1.05);
+}
+
+.lpCtaInner {
+  padding: 1.5rem 2.5rem;
+  background-color: rgba(10, 10, 10, 0.8);
+  backdrop-filter: blur(12px);
+  border-radius: 1.5rem;
+  border: 1px solid var(--arc-white-05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 500;
+  box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25);
+  transition: border-color 0.3s;
+}
+
+.lpHeroBtnText {
+  color: white;
+  font-weight: 500;           
+  font-size: 1.125rem;        
+  letter-spacing: -0.025em;   
+  white-space: nowrap;        
+}
+
+.lpCtaIconBox {
+  width: 2.5rem;
+  height: 2.5rem;
+  background-color: var(--arc-accent);
+  border-radius: 0.75rem;
+  color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.lpCapacityNote {
+  font-size: 10px;
+  color: var(--arc-white-40);
+  font-style: italic;
+  max-width: 280px;
+  text-align: center;
+  line-height: 1.25;
+}
+
+/* --- Media Queries für die Hero Section --- */
+
+@media (min-width: 768px) {
+  .heroGradientText {
+    font-size: 3.75rem; 
+  }
+  .lpHeroH1 span { 
+    font-size: 3.75rem; 
+  }
+  .lpHeroP { 
+    font-size: 1.5rem; 
+  }
+}
+
+@media (min-width: 1024px) {
+  .lpHeroGrid { 
+    grid-template-columns: 80% 20%; 
+  }
+  .lpHeroCtaCol { 
+    align-items: flex-end; 
+  }
+  .lpCapacityNote { 
+    text-align: right; 
+  }
+}
+
+@media (min-width: 1280px) {
+  .heroGradientText {
+    font-size: 4.5rem; 
+  }
+  .lpHeroH1 span { 
+    font-size: 4.5rem; /* text-7xl */ 
+  }
+}

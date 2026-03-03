@@ -1,0 +1,41 @@
+.group {
+  position: relative;
+}
+
+.input {
+  width: 100%;
+  background-color: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1); /* border-white/10 */
+  padding: 0.75rem 0; /* py-3 */
+  color: #ffffff;
+  transition: border-color 0.3s ease;
+  outline: none;
+}
+
+/* Versteckt den Placeholder, damit das Label den Platz einnehmen kann */
+.input::placeholder {
+  color: transparent;
+}
+
+.input:focus {
+  border-bottom-color: #E5D9B6;
+}
+
+.label {
+  position: absolute;
+  left: 0;
+  top: 0.75rem; /* top-3 */
+  color: rgba(255, 255, 255, 0.4); /* text-white/40 */
+  font-size: 0.875rem; /* text-sm */
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+
+/* Floating Label Logik: Wenn Fokus ODER Input nicht leer ist */
+.input:focus + .label,
+.input:not(:placeholder-shown) + .label {
+  top: -0.75rem; /* -top-3 */
+  font-size: 0.75rem; /* text-xs */
+  color: #E5D9B6;
+}

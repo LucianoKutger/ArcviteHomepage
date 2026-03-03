@@ -1,0 +1,168 @@
+/* SolutionCard.module.css */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  background-color: #0A0A0A;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 1.5rem; /* rounded-3xl */
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05); /* shadow-sm */
+
+}
+
+/* Hover-Effekte für die Karte selbst (entspricht Tailwind's hover:) */
+.card:hover {
+  border-color: rgba(229, 217, 182, 0.3);
+  box-shadow: 0 0 30px rgba(229, 217, 182, 0.1);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 12rem; /* h-48 */
+  background-color: rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  flex-shrink: 0;
+
+}
+
+/* Hover-Effekt für den Container (entspricht Tailwind's group-hover:bg-white/10) */
+.card:hover .imageContainer {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.gridPattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size: 20px 20px;
+}
+
+.imageWrapper {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+
+.gradientOverlay {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(to top, #0A0A0A, transparent, transparent);
+  opacity: 0.6;
+}
+
+.content {
+  padding: 1.5rem; /* p-6 */
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.topBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.iconGroup {
+  display: flex;
+  gap: 1rem; /* gap-4 */
+  align-items: center;
+}
+
+.idWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem; /* gap-3 */
+}
+
+.idText {
+  font-size: 0.75rem; /* text-xs */
+  color: rgba(255, 255, 255, 0.2);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+}
+
+.title {
+  font-size: 1.25rem; /* text-xl */
+  font-weight: 500;
+  color: white;
+  margin-bottom: 0.5rem; /* mb-2 */
+
+}
+
+.card:hover .title {
+  color: #E5D9B6;
+}
+
+.bodyWrapper {
+  margin-top: 1rem; /* mt-4 */
+  margin-bottom: 1rem; /* mb-4 */
+}
+
+.sectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* gap-2 */
+  margin-bottom: 0.5rem; /* mb-2 */
+}
+
+.problemDot {
+  width: 0.375rem; /* w-1.5 */
+  height: 0.375rem; /* h-1.5 */
+  border-radius: 9999px;
+  background-color: rgba(239, 68, 68, 0.5);
+}
+
+.problemLabel {
+  font-size: 0.75rem; /* text-xs */
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em; /* tracking-wider */
+  margin: 0;
+}
+
+.problemText {
+  font-size: 0.875rem; /* text-sm */
+  color: rgba(255, 255, 255, 0.6);
+  font-style: italic;
+  margin-bottom: 1rem; /* mb-4 */
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+  padding-left: 0.75rem; /* pl-3 */
+  margin-top: 0;
+}
+
+.solutionDot {
+  width: 0.375rem;
+  height: 0.375rem;
+  border-radius: 9999px;
+  background-color: #E5D9B6;
+}
+
+.solutionLabel {
+  font-size: 0.75rem;
+  color: rgba(229, 217, 182, 0.8);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.solutionText {
+  font-size: 0.875rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.625; /* leading-relaxed */
+  margin: 0;
+}

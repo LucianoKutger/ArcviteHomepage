@@ -1,0 +1,125 @@
+.lpNavbar {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 50;
+  transition: all 0.3s ease;
+  padding: 1.5rem 0;
+  border-bottom: 1px solid transparent;
+}
+
+.lpNavbar.scrolled {
+  background-color: rgba(5, 5, 5, 0.8);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--arc-white-05);
+  padding: 1rem 0;
+}
+
+.lpNavInner {
+  max-width: 80rem; 
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.lpLogoWrap {
+  cursor: pointer;
+}
+
+.lpNavLinks {
+  display: none; 
+}
+
+.lpNavBtn {
+  background: none;
+  border: none;
+  color: var(--arc-white-60);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: color 0.2s;
+  margin: 0 1rem;
+}
+
+.lpNavBtn:hover {
+  color: white;
+}
+
+.lpHeaderAuditBtn {
+  display: none;
+  background-color: var(--arc-white-10);
+  border: 1px solid var(--arc-white-05);
+  color: var(--arc-accent);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+  align-items: center;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.lpHeaderAuditBtn:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.lpNavActions {
+  display: none;
+}
+
+.lpMobileMenuToggle {
+  display: block;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.auditContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; 
+}
+
+.auditIcon {
+  width: 0.75rem;  
+  height: 0.75rem; 
+  transition: transform 0.3s ease;
+  display: block; 
+}
+
+.lpHeaderAuditBtn:hover .auditIcon {
+  transform: translateX(0.125rem); 
+}
+
+/* --- Media Queries für die Navbar --- */
+
+@media (min-width: 768px) {
+  .lpNavActions {
+    display: flex;
+    align-items: center;
+    gap: 1rem; 
+  }
+  
+  .lpNavLinks { 
+    display: flex; 
+    align-items: center; 
+    gap: 2rem; 
+  }
+  
+  .lpHeaderAuditBtn { 
+    display: flex; 
+  }
+  
+  .lpMobileMenuToggle { 
+    display: none; 
+  }
+}

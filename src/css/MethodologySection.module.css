@@ -1,0 +1,107 @@
+.section {
+position: relative;
+z-index: 10;
+padding-top: 8rem;
+padding-bottom: 8rem;
+border-top: 1px solid rgba(255, 255, 255, 0.05);
+background-color: #080808;
+overflow: hidden;
+}
+
+
+.bgPointer {
+position: absolute;
+inset: 0;
+pointer-events: none;
+user-select: none;
+}
+
+.bgBlob {
+position: absolute;
+top: 30%;
+left: -10%;
+width: 600px;
+height: 600px;
+background-color: rgba(229, 217, 182, 0.05); /* Goldener Schein */
+filter: blur(120px);
+border-radius: 50%;
+mix-blend-mode: screen;
+}
+
+
+.container {
+max-width: 80rem;
+width:100%;
+margin: 0 auto;
+padding: 0 1.5rem;
+position: relative;
+z-index: 10;
+}
+
+
+.flexWrapper {
+display: flex;
+flex-direction: column;
+gap: 4rem;
+}
+
+
+.headerBlock {
+max-width: 100%;
+}
+
+.headline {
+font-size: 1.875rem;
+font-weight: 600;
+letter-spacing: -0.025em;
+margin-bottom: 1.5rem;
+line-height: 1.2;
+color: white;
+}
+
+@media (min-width: 768px) {
+.headline {
+font-size: 3rem;
+
+}
+}
+
+.subHeadline {
+color: rgba(255, 255, 255, 0.8);
+}
+
+.paragraph {
+color: rgba(255, 255, 255, 0.6);
+font-size: 1.125rem;
+line-height: 1.625;
+margin-bottom: 2rem;
+max-width: 40rem;
+}
+
+.componentWrapper {
+width: 100%;
+max-width: 100%;
+margin: 0 auto;
+display: flex;
+justify-content: center;
+padding-left: 8rem;
+padding-right: 8rem;
+
+}
+.textColumn{
+max-width: 80rem;
+width: 100%;
+padding-top: 8rem;
+padding-bottom: 5rem;
+padding-left: 1.5rem;
+padding-right: 1.5rem;
+margin-left: auto;
+margin-right: auto;
+}
+
+.description{
+max-width: 80rem;
+width: 100%;
+font-size: 1.25rem;
+opacity: 0.6;
+}
