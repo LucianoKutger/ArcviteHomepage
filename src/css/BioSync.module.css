@@ -8,6 +8,7 @@
   background-color: #121212;
   border-top: 1px solid rgba(255, 255, 255, 0.05); /* border-t border-white/5 */
   overflow: hidden;
+  min-height: 959px;
 }
 
 .syncContainer {
