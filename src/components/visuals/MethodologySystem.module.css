@@ -14,15 +14,17 @@
   .container {
     flex-direction: row;     
     justify-content: center;
-    align-items: center;
+    align-items: flex-start; 
     gap: 4rem;
   }
 }
 
 .visualWrapper {
   max-width: 600px;
-  position: relative;
+  position: sticky;
   flex: 1;
+  top: 10rem;
+  align-self: flex-start;
 }
 
 .svgGraph {
