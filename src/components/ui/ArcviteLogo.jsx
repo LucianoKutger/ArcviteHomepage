@@ -1,4 +1,3 @@
-
 import logoStyles from './ArcviteLogo.module.css'; // Pfad anpassen
 
 const ArcviteLogo = () => (
