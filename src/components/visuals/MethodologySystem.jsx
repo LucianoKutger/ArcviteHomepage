@@ -106,16 +106,30 @@ const ArcSystem = () => {
           </defs>
 
           {/* Impact Flow Line */}
-          <g>
+         <g>
             <line x1={arrowStart.x} y1={arrowStart.y} x2={arrowEnd.x} y2={arrowEnd.y} stroke="white" strokeWidth="1.3" strokeOpacity="0.8" markerEnd="url(#arrow-to-center-bright)" />
+            
             <motion.line 
                 x1={arrowStart.x} y1={arrowStart.y} x2={arrowEnd.x} y2={arrowEnd.y} 
-                stroke="url(#flow-energy-white)" strokeWidth="4.5" strokeLinecap="round" 
-                initial={{ pathLength: 0.15, pathOffset: 0 }} 
-                animate={{ pathOffset: [-0.15, 1] }} 
-                transition={{ duration: 2.2, repeat: Infinity, ease: "linear" }} 
-                style={{ filter: 'drop-shadow(0 0 5px white)' }} 
+                stroke="url(#flow-energy-white)" strokeLinecap="round" 
+                initial={{ pathLength: 0.15, pathOffset: -0.15, opacity: 0 }} 
+                animate={{ 
+                    pathOffset: [-0.15, 1],
+                    // Startet unsichtbar -> Volle Leuchtkraft in der Mitte -> Endet unsichtbar
+                    opacity: [0.5, 1, 0.5], 
+                    // Startet dünn -> Wird in der Mitte dicker -> Endet wieder dünn
+                    strokeWidth: [2, 6, 2] 
+                }} 
+                transition={{ 
+                    // Die Bewegung bleibt konstant (linear)
+                    pathOffset: { duration: 4, repeat: Infinity, ease: "linear" },
+                    // Das Aufleuchten (opacity & strokeWidth) schwillt organisch an und ab (easeInOut)
+                    opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" },
+                    strokeWidth: { duration: 4, repeat: Infinity, ease: "easeInOut" }
+                }} 
+                style={{ filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.9))' }} 
             />
+            
             <text x={polarToCartesian(centerX, centerY, 600, 45).x + 12} y={polarToCartesian(centerX, centerY, 600, 45).y - 5} fill="white" fillOpacity="0.75" fontSize="10" letterSpacing="0.5em" className="uppercase italic font-extralight">Impact Flow</text>
           </g>
 

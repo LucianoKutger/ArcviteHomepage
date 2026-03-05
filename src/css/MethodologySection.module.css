@@ -84,14 +84,14 @@ max-width: 100%;
 margin: 0 auto;
 display: flex;
 justify-content: center;
-padding-left: 8rem;
-padding-right: 8rem;
+padding-left: 4rem;
+padding-right: 4rem;
 
 }
 .textColumn{
 max-width: 80rem;
 width: 100%;
-padding-top: 8rem;
+padding-top: 5rem;
 padding-bottom: 5rem;
 padding-left: 1.5rem;
 padding-right: 1.5rem;
