@@ -1,0 +1,24 @@
+.founderSection {
+  position: relative;
+  z-index: 10;
+  padding-top: 8rem; 
+  padding-bottom: 5rem; 
+  width: 100%; 
+  background-color: #000;
+}
+
+.founderContainer {
+  width: 100%;
+  max-width: 80rem; /* Das hält deine Inhalte zusammen */
+  margin: 0 auto;   /* Das zentriert den Inhalt in der Mitte */
+  padding-left: 1.5rem;  /* Etwas Abstand zum Rand für Handys */
+  padding-right: 1.5rem;
+}
+
+.founderTitle {
+  font-size: 1.875rem; /* text-3xl */
+  line-height: 2.25rem;
+  font-weight: 600; /* font-semibold */
+  letter-spacing: -0.025em; /* tracking-tight */
+  margin-bottom: 1.5rem; /* mb-6 */
+}

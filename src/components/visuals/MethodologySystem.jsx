@@ -17,8 +17,8 @@ const ArcSystem = () => {
       thickness: 6, 
       description: "Die psychologische Architektur deines Erfolgs. Dieser Kern arbeitet durch unsere Algorithmen vollautomatisch im Hintergrund.", 
       listItems: [
-        { label: "Nutrition", text: "Präzise Nährstoffzufuhr für maximale kognitive Kapazität." }, 
-        { label: "Sleep & Recovery", text: "Optimierung der hormonalen Regeneration und Schlafarchitektur." }
+        { label: "Regenerations Zyklus", text: "Das aktive Management von Schlafphasen, zirkadianer Rhythmik und Erholungsprotokollen. Er ist der entscheidende Taktgeber für Ihren neuronalen Reset und die Grundvoraussetzung für kognitive Präzision sowie die Kontrolle Ihrer Emotionen." }, 
+        { label: "Nährstoff-Basis", text: "Der Treibstoff für Ihren Tag. Sie entscheidet darüber, ob Ihre Energie bis zum Abend reicht oder ob Ihr Fokus vorzeitig einbricht. Ohne die richtige Basis riskieren Sie unnötigen Leistungsabfall." }
       ] 
     },
     { 
@@ -28,35 +28,35 @@ const ArcSystem = () => {
       hex: "#5F8D4E", 
       radius: 300, 
       thickness: 6, 
-      description: "Die biochemische Justierung deines Systems. Wir optimieren die internen Regelkreise für maximale neuronale Effizienz.", 
+      description: "Die biochemische Architektur Ihres Körpers. Faktoren der internen Leistungsfähigkeit, die wir mit moderner Wissenschaft messbar optimieren können.", 
       listItems: [
-        { label: "Hormonhaushalt", text: "Optimierung endokriner Prozesse für Stressresistenz." }, 
-        { label: "Neurotransmitter", text: "Kalibrierung von Dopamin und Serotonin für Fokus." },
-        { label: "Inflammation", text: "Minimierung systemischer Entzündungen." }
+        { label: "Hormonhaushalt", text: "Die Balance zwischen Stressadaption und Regeneration definiert Ihre emotionale Stabilität und physische Präsenz unter Druck." }, 
+        { label: "Neurotransmitter", text: "Die Qualität Ihrer kognitiven Signale. Diese Botenstoffe steuern Ihre Fokuskapazität, analytische Schärfe und Impulskontrolle in Verhandlungssituationen." },
+        { label: "Entzündungen", text: 'Der Wächter Ihrer biologischen Kapazität. Die Kontrolle systemischer Reaktionen eliminiert kognitive Bremsen wie "Brain Fog" und sichert Ihre Energieproduktion gegen vorzeitigen Verschleiß.' }
       ] 
     },
     { 
       id: 3, 
-      title: "Strategic Vision", 
+      title: "Operational Sphere", 
       subtitle: "Executive Ecosystem", 
       hex: "#A4BE7B", 
       radius: 420, 
       thickness: 6, 
-      description: "Die makroskopische Perspektive. Wir synchronisieren deine interne Leistung mit den äußeren Kräften des Marktes.", 
+      description: "Die makroskopische Perspektive. Die äußeren Kräfte und systemischen Variablen, die permanent auf Ihre Biologie und Psychologie einwirken. Ihr System muss diese Faktoren nicht nur aushalten, sondern verarbeiten.", 
       listItems: [
-        { label: "Marktdynamik", text: "Navigation in volatilen Märkten." }, 
-        { label: "Geopolitik", text: "Bewertung globaler Machtverschiebungen." },
-        { label: "Legacy", text: "Definition eines nachhaltigen Impact-Blueprints." }
+        { label: "Unberechenbare Ereignisse", text: "Globale Krisen, Black-Swan-Events und plötzliche Situationen, die sich nicht im Vorfeld planen lassen und von Ihnen eine sofortige Adaption fordern." }, 
+        { label: "Asymmetrisches Umfeld", text: "Ein von chronischem Druck geprägtes Ökosystem. Deadlines, Globale Mobilität und das kontinuierliche Management unternehmerischer Risiken." },
+        { label: "Hochdruck Szenarien", text: "Verhandlungssituationen, in denen emotionale Kontrolle, kognitive Präzision und die richtige Herangehensweise über Erfolg oder Scheitern entscheiden. Momente, in denen unkontrollierte Emotionsschwankungen Ihr Urteilsvermögen direkt bedrohen." }
       ] 
     },
     { 
       id: 4, 
       title: "Dream", 
-      subtitle: "The Ultimate Vision", 
+      subtitle: "Your Ultimate Vision", 
       hex: "#E5D9B6", 
       radius: 540, 
       thickness: 6, 
-      description: "Die Definition und Realisierung deiner höchsten Ambitionen. Jenseits von Marktanteilen erschaffen wir hier die Blaupause für dein Lebenswerk.",
+      description: "Ihr Polarstern. Im Bogenmodell ist der Traum die oberste Instanz, nach der wir alles ausrichten. Er definiert die Leitplanken für Ihre Strategic Vision, Ihre Neuro-Biochemistry und Ihre Core Effects. Alles folgt dem Ziel.",
       listItems: null
     }
   ], []);

@@ -12,6 +12,8 @@
 .cardOpen {
   border-color: rgba(229, 217, 182, 0.4);
   background-color: #0E0E0E;
+  margin-bottom: -172px;
+  min-height: 587px;
 }
 
 .cardGradientOverlay {
@@ -153,4 +155,17 @@
   height: 4px;
   background-color: #E5D9B6;
   border-radius: 50%;
+}
+
+.cardWide {
+  width: 100%;
+}
+
+@media (min-width: 1024px) {
+  .cardWide {
+    grid-column: 1 / -1; 
+    width: 80%;         
+    justify-self: center; 
+    margin-top: 172px;
+  }
 }

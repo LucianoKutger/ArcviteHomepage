@@ -3,14 +3,30 @@ import { ChevronDown } from "lucide-react";
 import styles from "./ExpandableCards.module.css";
 
 const ExpandableCard = ({ 
-  title, category, focusTitle, focusDesc, imageLabel, imageSrc, details, className = "", isOpen, onToggle 
+  title, category, focusTitle, focusDesc, imageLabel, imageSrc, details, className = "", isOpen, onToggle, opacity, wide
 }) => {
+  const opacityVal = opacity ?? 1
+
   return (
     <motion.div 
       layout
       layoutId={`card-${title}`}
-      className={`${styles.card} ${isOpen ? styles.cardOpen : ''} ${className}`}
+      className={`${styles.card} ${isOpen ? styles.cardOpen : ''} ${className} ${wide ? styles.cardWide : ''}`}
       onClick={onToggle}
+     
+      animate={{
+        marginBottom: (isOpen && !wide) ? -172 : 0,
+        zIndex: isOpen ? 50 : 10
+      }}
+      
+      transition={{
+        marginBottom: {
+          duration: isOpen ? 0 : 0.3,
+          ease: "easeInOut"
+        },
+        duration: 0.3,
+        ease: "easeInOut"
+      }}
     >
       <div className={styles.cardGradientOverlay} />
       
@@ -19,7 +35,9 @@ const ExpandableCard = ({
           <img 
             src={imageSrc} 
             alt={title} 
-            className={styles.cardImage} 
+            className={styles.cardImage}
+            style={{opacity: opacityVal}}
+            
           />
         ) : (
           <>

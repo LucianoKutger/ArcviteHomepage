@@ -26,6 +26,7 @@ export const solutions = [
       solution: "Wir arbeiten mit schneller Vor-Ort-Implementierung. Sie bleiben wo Sie sind. Wir kommen zu Ihnen. Die Supplements, Blueprints, und Equipment landen auf Ihrem Tisch, ohne dass Sie einen Finger rühren müssen.",
       details: "Unser operatives Team übernimmt das komplette Management Ihrer Gesundheitslogistik. Von der Terminkoordination mit Spezialisten bis hin zur Just-in-Time Lieferung von Supplements und Equipment – wir agieren als unsichtbare Schnittstelle, die sicherstellt, dass alle Protokolle eingehalten werden, ohne dass Sie Ihre Agenda anpassen müssen. Dies beinhaltet auch die proaktive Kommunikation mit Ihrer bestehenden medizinischen Infrastruktur.",
       imgSrc: solution1
+
     },
     {
       id: 2,
@@ -222,7 +223,8 @@ export const syncCardsData = [
       "Schlaf-Phasen-Analyse (REM/Deep)",
       "Langzeit-Trend-Erkennung für Recovery"
     ],
-    className: "relative z-20 bg-[#0A0A0A]"
+    className: "relative z-20 bg-[#0A0A0A]",
+    opacity: 0.75
   },
   {
     id: "Clinical Lab",
@@ -238,10 +240,28 @@ export const syncCardsData = [
       "Kardiovaskuläre Risiko-Analyse (ApoB, Lp(a))",
       "Detaillierte ärztliche Befundbesprechung"
     ],
-    className: "relative z-20 bg-[#0A0A0A]"
+    className: "relative z-20 bg-[#0A0A0A]",
+  
   },
   {
-    id: "Data Fusion",
+    id: "Gene Analysis",
+    title: "Gene Analysis",
+    category: "Placeholder",
+    focusTitle: "Placeholder",
+    focusDesc: "Placeholder",
+    imageLabel: "Placeholder",
+    imageSrc: bio3,
+    details: [
+      "Placeholder",
+      "Placeholder",
+      "Placeholder",
+      "Placeholder"
+    ],
+    className: "bg-[#0C0C0C] border-[#E5D9B6]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]",
+    
+  },
+  {
+      id: "Data Fusion",
     title: "Data Fusion",
     category: "SYNTHESE",
     focusTitle: "Performance Synchronisation",
@@ -254,7 +274,9 @@ export const syncCardsData = [
       "Korrelation von Blutwerten mit Schlafdaten",
       "Anonymisierte Cloud-Infrastruktur"
     ],
-    className: "bg-[#0C0C0C] border-[#E5D9B6]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]"
+    className: "bg-[#0C0C0C] border-[#E5D9B6]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]",
+    
+    wide: true 
   }
   ];
 export const faqs = [
