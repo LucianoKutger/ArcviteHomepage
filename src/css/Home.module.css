@@ -7,26 +7,6 @@
   overflow: hidden;
 }
 
-.lpHeroBg {
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-}
-
-.lpGradientX {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to right, #050505, rgba(5,5,5,0.6), transparent);
-  pointer-events: none;
-}
-
-.lpGradientY {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, #050505, transparent, transparent);
-  pointer-events: none;
-}
-
 .lpHeroContainer {
   position: relative;
   z-index: 10;

@@ -57,11 +57,9 @@ const Home = () => {
   return (
     <main>
       <section id="home" className={homeStyles.lpHeroSection}>
-        <div className={homeStyles.lpHeroBg}>
+      
           <HeroFlowLines />
-          <div className={homeStyles.lpGradientX} />
-          <div className={homeStyles.lpGradientY} />
-        </div>
+        
 
         <div className={homeStyles.lpHeroContainer}>
           <motion.div 
@@ -239,6 +237,8 @@ const Home = () => {
       </FadeOutSection>
 
       <FadeOutSection id="biosync" className={bioSyncStyles.syncSection} delayPercentage={0.6}>
+          <HeroFlowLines direction='left' color='#1B4F8F'/>
+          
         <div className={bioSyncStyles.syncContainer}>
           <div className={bioSyncStyles.syncHeader}>
             <h2 className={bioSyncStyles.syncTitle}>
