@@ -2,26 +2,26 @@ import React, { useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { ChevronRight, Brain, ArrowUpRight, Infinity, Send, Shield } from 'lucide-react';
 
-import ExpandableCard from '../cards/ExpandableCards';
-import SolutionCard from '../cards/SolutionCard';
-import ArcviteLogo from '../ui/ArcviteLogo';
-import FormInput from './FormInput';
-import HeroFlowLines from '../visuals/HeroFlowLines';
-import MethodologySystem from '../visuals/MethodologySystem';
-import SolutionModal from './SolutionModal'
-import FAQItem from '../cards/Faq';
-import FadeOutSection from '../visuals/FadeoutSection';
+import ExpandableCard from './components/cards/ExpandableCards';
+import SolutionCard from './components/cards/SolutionCard';
+import ArcviteLogo from './components/ui/ArcviteLogo';
+import FormInput from './components/ui/FormInput';
+import HeroFlowLines from './components/visuals/HeroFlowLines';
+import MethodologySystem from './components/visuals/MethodologySystem';
+import SolutionModal from './components/ui/SolutionModal'
+import FAQItem from './components/cards/Faq';
+import FadeOutSection from './components/visuals/FadeoutSection';
 
-import { solutions, goalOptions, syncCardsData, faqs } from '../../data/content';
+import { solutions, goalOptions, syncCardsData, faqs } from './data/content';
 
-import methodologyStyles from '../../css/MethodologySection.module.css';
-import homeStyles from '../../css/Home.module.css';
-import bioSyncStyles from '../../css/BioSync.module.css';
-import visionStyles from '../../css/VisionSection.module.css';
-import protocolsSectionStyles from '../../css/ProtocolsSection.module.css';
-import auditStyles from '../../css/Audit.module.css';
-import founderStyles from '../../css/Founder.module.css';
-import faqStyles from '../../css/Faq.module.css';
+import methodologyStyles from './css/MethodologySection.module.css';
+import homeStyles from './css/Home.module.css';
+import bioSyncStyles from './css/BioSync.module.css';
+import visionStyles from './css/VisionSection.module.css';
+import protocolsSectionStyles from './css/ProtocolsSection.module.css';
+import auditStyles from './css/Audit.module.css';
+import founderStyles from './css/Founder.module.css';
+import faqStyles from './css/Faq.module.css';
 
 const Home = () => {
   const [selectedGoals, setSelectedGoals] = useState([]);
@@ -185,12 +185,56 @@ const Home = () => {
         </div>
       </FadeOutSection>
 
-      <FadeOutSection id="founder" className={founderStyles.founderSection}>
-        <div className={founderStyles.founderContainer}>
-          <div className={founderStyles.founderTitle}>
-            <h1>Our Founder</h1>
-            <p>Slicy King</p>
+      <FadeOutSection id="founder" className={founderStyles.section}>
+        <div className={founderStyles.gridContainer}>
+          
+          {/* Text Content (Left Side) */}
+          <div className={founderStyles.textContent}>
+            <div className={founderStyles.labelContainer}>
+              <div className={founderStyles.labelLine}></div>
+              <span className={founderStyles.labelText}>Our Founder</span>
+            </div>
+
+            <h2 className={founderStyles.heading}>
+              "IF YOU THINK BIG,<br />
+              <span className={founderStyles.headingFaded}>TRY THINKING BIGGER."</span>
+            </h2>
+
+            <div className={founderStyles.quoteBlock}>
+              <p className={founderStyles.quoteText}>
+                "Alle Schwäche ist Willensschwäche."
+              </p>
+              <p className={founderStyles.quoteAuthor}>
+                — Friedrich Nietzsche
+              </p>
+            </div>
+
+            <div className={founderStyles.quoteBlockLast}>
+              <p className={founderStyles.quoteText}>
+                "Arcvite ist die Architektur, die dort übernimmt, wo der menschliche Wille versagt."
+              </p>
+              <p className={founderStyles.quoteAuthor}>
+                — Andreas, Founder Arcvite
+              </p>
+            </div>
+
+            <div className={founderStyles.description}>
+              <p>
+                Das Bogenmodell ist das Destillat aus intensiver Systemtheorie und der Analyse von Menschen mit einer unnachgiebigen Obszession für ihre Ziele. Es ist ein Framework, das die unsichtbaren Reibungsverluste sichtbar macht. Wir eliminieren die Lücke zwischen Ihrer Vision und der tatsächlichen Ausführung.
+              </p>
+            </div>
           </div>
+
+          {/* Image Placeholder (Right Side) - Fading into background */}
+          <div className={founderStyles.imageContainer}>
+              {/* Pattern representing the image, fading out towards the edges */}
+              <div className={founderStyles.imagePattern} />
+              
+              <div className={founderStyles.imagePlaceholderText}>
+                [Bild: Andreas <br/> (weicher Übergang in den Hintergrund)]
+              </div>
+          </div>
+
         </div>
       </FadeOutSection>
 
@@ -315,19 +359,7 @@ const Home = () => {
             </form>
           </div>
 
-          <div className={auditStyles.bottomFooter}>
-            <div className={auditStyles.logoContainer}>
-              <div className={auditStyles.logoWrapper} onClick={() => scrollToSection('home')}>
-                <ArcviteLogo />
-              </div>
-            </div>
-            <div className={auditStyles.linksContainer}>
-        
-              <a href="/impressum" className={auditStyles.footerLink}>Impressum</a>
-              <a href="/datenschutz" className={auditStyles.footerLink}>Datenschutz</a>
-            </div>
-            <p className={auditStyles.copyright}>© 2026 Arcvite</p>
-          </div>
+          
         </div>
       </FadeOutSection>
 
@@ -348,16 +380,30 @@ const Home = () => {
           </div>
         </div>
         
-        <div className={visionStyles.buttonWrapper}>
+        <div className={faqStyles.buttonWrapper}>
           <button 
             onClick={() => scrollToSection('audit')}
-            className={visionStyles.ctaButton}
+            className={faqStyles.ctaButton}
           >
-            <span className={visionStyles.buttonContent}>
-              Jetzt Privates Audit sichern <ChevronRight className={visionStyles.chevronIcon} />
+            <span className={faqStyles.buttonContent}>
+              Jetzt Privates Audit sichern <ChevronRight className={faqStyles.chevronIcon} />
             </span>
           </button>
         </div>
+
+        <div className={faqStyles.bottomFooter}>
+            <div className={faqStyles.logoContainer}>
+              <div className={faqStyles.logoWrapper} onClick={() => scrollToSection('home')}>
+                <ArcviteLogo />
+              </div>
+            </div>
+            <div className={faqStyles.linksContainer}>
+        
+              <a href="/impressum" className={faqStyles.footerLink}>Impressum</a>
+              <a href="/datenschutz" className={faqStyles.footerLink}>Datenschutz</a>
+            </div>
+            <p className={faqStyles.copyright}>© 2026 Arcvite</p>
+          </div>
       </footer>
 
       <AnimatePresence>

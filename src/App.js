@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 
 
 import Navbar from './components/ui/Navbar'; 
-import Home from './components/ui/Home';                   
+import Home from './Home';                   
 import LegalNotice from './components/LegalNotice';
 import PrivacySettings from './components/PrivacySettings'
 
