@@ -12,10 +12,12 @@ import bio3 from '../assets/bio3.avif';
 
 export const navItems = [
     { label: 'Home', targetId: 'home' },
+    { label: 'Vision', targetId: 'vision' },
     { label: 'The Arc', targetId: 'methodik' },
-    { label: 'Biometrics', targetId: 'biometrics' },
+    { label: 'Our Founder', targetId: 'founder' },
+    { label: 'Bio Snyc', targetId: 'bioync' },
     { label: 'Solutions', targetId: 'protokolle' },
-    { label: 'Vision', targetId: 'vision' }
+    { label: 'FAQ', targetId: 'faq' }
   ];
 
 export const solutions = [

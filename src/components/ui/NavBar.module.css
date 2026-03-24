@@ -6,11 +6,6 @@
   padding: 1.5rem 0;
   border-bottom: 1px solid transparent;
 
- 
-  
-
-  
-  
 }
 
 .lpNavbar.scrolled {
@@ -21,12 +16,12 @@
 }
 
 .lpNavInner {
-  max-width: 80rem; 
+  max-width: 80%; 
   margin: 0 auto;
   padding: 0 1.5rem;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   height: 50px;
 }
 
