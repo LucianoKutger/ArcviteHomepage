@@ -1,11 +1,18 @@
+/* faqStyles.module.css */
+
+/* --- Hauptsektion --- */
 .section {
   position: relative;
   z-index: 10;
-  padding: 8rem 1.5rem; /* py-32 px-6 */
+  padding: 8rem 1.5rem;
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   background-color: #080808;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
+/* --- FAQ Bereich --- */
 .faqSection {
   max-width: 48rem; 
   margin-left: auto;
@@ -13,20 +20,22 @@
   text-align: left;
   position: relative;
   z-index: 10;
+  width: 100%;
 }
 
 .faqHeading {
-  font-size: 1.875rem; /* text-3xl */
+  font-size: 1.875rem;
   font-weight: 600;
   letter-spacing: -0.025em;
-  margin-bottom: 0.75rem; /* mb-3 */
+  margin-bottom: 0.75rem;
   text-align: center;
   color: white;
 }
+
 .faqSubheading {
   color: rgba(255, 255, 255, 0.4);
   text-align: center;
-  margin-bottom: 3rem; /* mb-12 */
+  margin-bottom: 3rem;
   font-weight: 300;
 }
 
@@ -34,7 +43,7 @@
   background-color: #0A0A0A;
   border: 1px solid rgba(255, 255, 255, 0.05);
   border-radius: 1.5rem;
-  padding: 1.5rem; /* p-6 */
+  padding: 1.5rem;
   box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
@@ -42,8 +51,123 @@
   .faqContainer {
     padding: 2.5rem; 
   }
-
   .faqHeading {
-    font-size: 2.25rem; /* md:text-4xl */
+    font-size: 2.25rem;
+  }
+}
+
+/* --- Button (Aus Vision-Styles übernommen) --- */
+.buttonWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 4rem;
+}
+
+.ctaButton {
+  padding: 1rem 2.5rem;
+  background-color: #E5D9B6;
+  color: black;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  border-radius: 9999px;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  border: none;
+  cursor: pointer;
+}
+
+.ctaButton:hover {
+  background-color: white;
+  box-shadow: 0 0 30px rgba(229, 217, 182, 0.3);
+}
+
+.buttonContent {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chevronIcon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .chevronIcon {
+  transform: translateX(0.25rem);
+}
+
+/* --- Bottom Footer (Aus Audit & FAQ kombiniert) --- */
+.bottomFooter {
+  display: flex;
+  flex-direction: column; /* Standardmäßig untereinander auf Mobile */
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+  /* min-width: 868px; <- Optional: Dies kann auf kleinen Bildschirmen zu horizontalem Scrollen führen. 
+     Besser wäre width: 100% und max-width: 80rem wie in den anderen Sections */
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .bottomFooter {
+    flex-direction: row;
+  }
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+@media (min-width: 768px) {
+  .logoContainer {
+    margin-bottom: 0;
+  }
+}
+
+.logoWrapper {
+  opacity: 0.8;
+  transform: scale(0.75);
+  transform-origin: left center;
+  cursor: pointer;
+}
+
+.linksContainer {
+  display: flex;
+  gap: 2rem;
+}
+
+.footerLink {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footerLink:hover {
+  color: white;
+}
+
+.copyright {
+  margin-top: 1rem;
+}
+
+@media (min-width: 768px) {
+  .copyright {
+    margin-top: 0;
   }
 }

@@ -1,24 +1,165 @@
-.founderSection {
+/* founderStyles.module.css */
+
+.section {
   position: relative;
   z-index: 10;
-  padding-top: 8rem; 
-  padding-bottom: 5rem; 
-  width: 100%; 
-  background-color: #000;
+  padding: 8rem 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.founderContainer {
+.gridContainer {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 4rem;
+  align-items: center;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  order: 2;
+}
+
+.labelContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.labelLine {
+  height: 1px;
+  width: 2rem;
+  background-color: rgba(229, 217, 182, 0.5);
+}
+
+.labelText {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #E5D9B6;
+  text-transform: uppercase;
+}
+
+.heading {
+  font-size: 2.25rem;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: white;
+  margin-bottom: 3rem;
+  line-height: 1.1;
+}
+
+.headingFaded {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.quoteBlock {
+  border-left: 2px solid rgba(229, 217, 182, 0.4);
+  padding-left: 1.5rem;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.quoteBlockLast {
+  border-left: 2px solid rgba(229, 217, 182, 0.4);
+  padding-left: 1.5rem;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.quoteText {
+  font-size: 1.25rem;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: 1rem;
+  line-height: 1.625;
+}
+
+.quoteAuthor {
+  font-size: 0.75rem;
+  color: #E5D9B6;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 700;
+}
+
+.description {
+  font-size: 1.125rem;
+  color: rgba(255, 255, 255, 0.6);
+  line-height: 1.625;
+  font-weight: 300;
+  max-width: 32rem;
+}
+
+/* Repliziert den Tailwind "space-y-6" Effekt für mehrere Absätze */
+.description > * + * {
+  margin-top: 1.5rem;
+}
+
+.imageContainer {
+  position: relative;
   width: 100%;
-  max-width: 80rem; /* Das hält deine Inhalte zusammen */
-  margin: 0 auto;   /* Das zentriert den Inhalt in der Mitte */
-  padding-left: 1.5rem;  /* Etwas Abstand zum Rand für Handys */
-  padding-right: 1.5rem;
+  aspect-ratio: 3 / 4;
+  order: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.founderTitle {
-  font-size: 1.875rem; /* text-3xl */
-  line-height: 2.25rem;
-  font-weight: 600; /* font-semibold */
-  letter-spacing: -0.025em; /* tracking-tight */
-  margin-bottom: 1.5rem; /* mb-6 */
+.imagePattern {
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 30px 30px;
+  mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+  -webkit-mask-image: radial-gradient(ellipse at center, black 40%, transparent 70%);
+}
+
+.imagePlaceholderText {
+  position: relative;
+  z-index: 20;
+  padding: 0.75rem 1.5rem;
+  background-color: transparent;
+  font-size: 0.75rem;
+  font-family: monospace;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+}
+
+/* --- Media Queries für Tailwind Breakpoints (md: 768px, lg: 1024px) --- */
+
+@media (min-width: 768px) {
+  .heading {
+    font-size: 3rem;
+  }
+  .quoteText {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .gridContainer {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6rem;
+  }
+  .textContent {
+    order: 1;
+  }
+  .heading {
+    font-size: 3.75rem;
+  }
+  .imageContainer {
+    order: 2;
+  }
 }

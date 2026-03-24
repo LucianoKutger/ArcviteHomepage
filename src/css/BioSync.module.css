@@ -1,67 +1,63 @@
-/* SyncSection.module.css */
-
 .syncSection {
   position: relative;
   z-index: 10;
-  padding-top: 6rem; /* py-24 */
-  padding-bottom: 6rem; /* py-24 */
+  padding: 6rem 0;
   background-color: #121212;
-  border-top: 1px solid rgba(255, 255, 255, 0.05); /* border-t border-white/5 */
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
   overflow: hidden;
-  min-height: 959px;
+  min-height: 1560px;
 }
 
 .syncContainer {
-  max-width: 80rem; /* max-w-7xl */
-  margin-left: auto; /* mx-auto */
-  margin-right: auto;
-  padding-left: 1.5rem; /* px-6 */
-  padding-right: 1.5rem;
+  max-width: 80rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
   position: relative;
   z-index: 10;
 }
 
 .syncHeader {
-  margin-bottom: 4rem; /* mb-16 */
+  margin-bottom: 4rem;
 }
 
-/* --- Typografie --- */
 .syncTitle {
-  font-size: 1.875rem; /* text-3xl */
+  font-size: 1.875rem;
   line-height: 2.25rem;
-  font-weight: 600; /* font-semibold */
-  letter-spacing: -0.025em; /* tracking-tight */
-  margin-bottom: 1rem; /* mb-4 */
-  margin-top: 0;
-  color: #ffffff; /* Fallback/Standard für Dark Mode */
-}
-
-@media (min-width: 768px) {
-  .syncTitle {
-    font-size: 3rem; /* md:text-5xl */
-    line-height: 1;
-  }
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  margin: 0 0 1rem 0;
+  color: #ffffff;
 }
 
 .syncSubtitle {
-  color: rgba(255, 255, 255, 0.6); /* text-white/60 */
-  font-size: 1.125rem; /* text-lg */
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 1.125rem;
   line-height: 1.75rem;
   margin: 0;
 }
 
-/* --- Grid-Layout für die Karten --- */
 .syncGrid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr); /* grid-cols-1 */
-  gap: 2rem; /* gap-8 */
+  grid-template-columns: minmax(0, 1fr);
+  gap: 2rem;
   position: relative;
   z-index: 20;
-  align-items: flex-start; /* items-start */
+  align-items: flex-start;
 }
 
+/* Media Queries */
+
+/* Tablet (md) */
+@media (min-width: 768px) {
+  .syncTitle {
+    font-size: 3rem;
+    line-height: 1;
+  }
+}
+
+/* Desktop (lg) */
 @media (min-width: 1024px) {
   .syncGrid {
-    grid-template-columns: repeat(3, minmax(0, 1fr)); /* lg:grid-cols-3 */
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
