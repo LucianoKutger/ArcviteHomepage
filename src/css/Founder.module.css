@@ -1,5 +1,3 @@
-/* founderStyles.module.css */
-
 .section {
   position: relative;
   z-index: 10;
@@ -98,7 +96,6 @@
   max-width: 32rem;
 }
 
-/* Repliziert den Tailwind "space-y-6" Effekt für mehrere Absätze */
 .description > * + * {
   margin-top: 1.5rem;
 }
@@ -136,8 +133,6 @@
   letter-spacing: 0.1em;
   text-align: center;
 }
-
-/* --- Media Queries für Tailwind Breakpoints (md: 768px, lg: 1024px) --- */
 
 @media (min-width: 768px) {
   .heading {
