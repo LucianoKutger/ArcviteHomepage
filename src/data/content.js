@@ -246,16 +246,15 @@ export const syncCardsData = [
   {
     id: "Gene Analysis",
     title: "Gene Analysis",
-    category: "Placeholder",
-    focusTitle: "Placeholder",
-    focusDesc: "Placeholder",
-    imageLabel: "Placeholder",
+    category: "Herkunftsanalyse",
+    focusTitle: "",
+    focusDesc: "Entschlüsselung Ihres genetischen Bauplans zur präzisen Steuerung von Langlebigkeit und physischer Belastbarkeit",
+    imageLabel: "Genetisches Profiling",
     imageSrc: bio3,
     details: [
-      "Placeholder",
-      "Placeholder",
-      "Placeholder",
-      "Placeholder"
+      "Alterungsrate",
+      "Entzündungswerte",
+      "Immunfähigkeit / Immunalter"
     ],
     className: "bg-[#0C0C0C] border-[#E5D9B6]/30 shadow-[0_0_30px_rgba(0,0,0,0.5)]",
     
