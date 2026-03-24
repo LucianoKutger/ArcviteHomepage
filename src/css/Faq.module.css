@@ -108,7 +108,7 @@
 /* --- Bottom Footer (Aus Audit & FAQ kombiniert) --- */
 .bottomFooter {
   display: flex;
-  flex-direction: column; /* Standardmäßig untereinander auf Mobile */
+  flex-direction: column; 
   justify-content: space-between;
   align-items: center;
   margin-top: 5rem;
@@ -116,9 +116,8 @@
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   font-size: 0.75rem;
   color: rgba(255, 255, 255, 0.3);
-  /* min-width: 868px; <- Optional: Dies kann auf kleinen Bildschirmen zu horizontalem Scrollen führen. 
-     Besser wäre width: 100% und max-width: 80rem wie in den anderen Sections */
-  width: 100%;
+  min-width: 868px; 
+  width: 50%
 }
 
 @media (min-width: 768px) {
