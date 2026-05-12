@@ -1,8 +1,27 @@
+import React, { useEffect } from 'react';
 import { motion } from "framer-motion";
 import { X, ArrowUpRight } from 'lucide-react';
 import styles from './SolutionModal.module.scss';
 
 const SolutionModal = ({ item, onClose }) => {
+useEffect(() => {
+        // Finde den React-Root-Container (falls vorhanden)
+        const rootElement = document.getElementById('root');
+        
+        // Sperre ALLES, was scrollen könnte
+        document.body.style.overflow = 'hidden';
+        document.documentElement.style.overflow = 'hidden';
+        if (rootElement) rootElement.style.overflow = 'hidden';
+
+        return () => {
+            // Setze beim Schließen alles sauber zurück
+            document.body.style.overflow = '';
+            document.documentElement.style.overflow = '';
+            if (rootElement) rootElement.style.overflow = '';
+        };
+    }, []);
+
+
     if (!item) return null;
 
     return (
@@ -48,7 +67,13 @@ const SolutionModal = ({ item, onClose }) => {
                     </div>
                 </div>
 
-                <div className={styles.contentContainer}>
+                <div 
+                className={styles.contentContainer}
+                data-lenis-prevent="true" 
+                data-lenis-prevent-wheel="true"
+                onWheel={(e) => e.stopPropagation()} 
+                onTouchMove={(e) => e.stopPropagation()}
+                >
                     <div className={styles.gridWrapper}>
                         <div className={styles.leftColumn}>
                              <div>

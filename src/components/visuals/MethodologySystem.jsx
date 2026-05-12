@@ -198,7 +198,7 @@ const ArcSystem = () => {
                   />
                   <span 
                     className={styles.subtitle} 
-                    style={{ color: isActive ? segment.hex : 'rgba(255,255,255,0.4)' }}
+                    style={{ color: isInactive ? 'rgba(255,255,255,0.4)' : segment.hex}}
                   >
                     {segment.subtitle}
                   </span>

@@ -1,14 +1,15 @@
 import React from "react";
 import { Brain, Dna, HeartPulse } from 'lucide-react';
-import solution1 from '../assets/solution_1.jpg';
-import solution2 from '../assets/solution_2.jpg';
-import solution3 from '../assets/solution_3.jpg';
-import solution4 from '../assets/solution_4.jpg';
-import solution5 from '../assets/solution_5.png';
-import solution6 from '../assets/solution_6.png';
-import bio1 from '../assets/bio1.jpg';
-import bio2 from '../assets/bio2.avif';
-import bio3 from '../assets/bio3.avif';
+import fullSpec1 from '../assets/FullSpec1.png';
+import fullSpec2 from '../assets/FullSpec2.png';
+import fullSpec3 from '../assets/FullSpec3.png';
+import fullSpec4 from '../assets/FullSpec4.png';
+import fullSpec5 from '../assets/FullSpec5.png';
+import fullSpec6 from '../assets/FullSpec6.png';
+import biometricHub from '../assets/BiometricHub.png';
+import clinicalLab from '../assets/ClinicalLab.png';
+import geneAnalysis from '../assets/GeneAnalysis.png';
+import dataFusion from '../assets/DataFusion.jpg';
 
 export const navItems = [
     { label: 'Home', targetId: 'home' },
@@ -27,7 +28,7 @@ export const solutions = [
       problem: "Keine Zeit für die Umsetzung",
       solution: "Wir arbeiten mit schneller Vor-Ort-Implementierung. Sie bleiben wo Sie sind. Wir kommen zu Ihnen. Die Supplements, Blueprints, und Equipment landen auf Ihrem Tisch, ohne dass Sie einen Finger rühren müssen.",
       details: "Unser operatives Team übernimmt das komplette Management Ihrer Gesundheitslogistik. Von der Terminkoordination mit Spezialisten bis hin zur Just-in-Time Lieferung von Supplements und Equipment – wir agieren als unsichtbare Schnittstelle, die sicherstellt, dass alle Protokolle eingehalten werden, ohne dass Sie Ihre Agenda anpassen müssen. Dies beinhaltet auch die proaktive Kommunikation mit Ihrer bestehenden medizinischen Infrastruktur.",
-      imgSrc: solution1
+      imgSrc: fullSpec1
 
     },
     {
@@ -36,7 +37,7 @@ export const solutions = [
       problem: "Kognitives Rauschen & Fokus Verlust",
       solution: "Eliminierung von Entzündungen und Stabilisierung der Neurochemie. Konstante mentale Schärfe für High-Stakes Entscheidungen, unabhängig von der Uhrzeit.",
       details: "Wir nutzen fortschrittliche Neuro-Feedback-Technologien und präzise abgestimmte Nootropika-Stacks, um Ihre Neurotransmitter-Balance zu optimieren. Das Ziel ist ein Zustand dauerhafter mentaler Klarheit und gesteigerter exekutiver Funktion, selbst in Phasen hoher psychischer Belastung. Wir analysieren Catecholamin-Metaboliten, um den perfekten Neuro-Stack für Ihre Physiologie zu entwickeln.",
-      imgSrc: solution2
+      imgSrc: fullSpec2
     },
     {
       id: 3,
@@ -44,7 +45,7 @@ export const solutions = [
       problem: "Unkalkulierbare biologische Ausfallrisiken",
       solution: "Wir managen Ihre Gesundheit wie ein Investment-Portfolio. Durch quartalsweise Tiefenanalysen (ApoB, HbA1c, Hormone) detektieren unsere Frühwarnsysteme Risiken, bevor sie Ihre operative Handlungsfähigkeit gefährden.",
       details: "Durch die kontinuierliche Überwachung von über 50 Biomarkern schaffen wir ein Frühwarnsystem, das pathologische Entwicklungen erkennt, lange bevor Symptome auftreten. Wir managen Ihre Gesundheit mit der gleichen Sorgfalt und Voraussicht wie ein institutionelles Asset-Portfolio. Dies beinhaltet genetische Prädispositionsanalysen und epigenetische Alterstests.",
-      imgSrc: solution3
+      imgSrc: fullSpec3
     },
     {
       id: 4,
@@ -52,7 +53,7 @@ export const solutions = [
       problem: "Leistungsabfall durch globale Mobilität",
       solution: "Reisespezifische Algorithmen. Von Jetlag-Protokollen bis hin zu präzisen Restaurant-Briefings für Geschäftsessen – wir passen Ihre Biologie dynamisch an jede Zeitzone und jedes soziale Szenario an.",
       details: "Unser System passt sich Ihrem Lebensstil an, nicht umgekehrt. Wir entwickeln adaptive Protokolle für Zeitzonenwechsel, Geschäftsreisen und unregelmäßige Schlafzyklen, damit Ihre physiologische Performance unabhängig von externen Faktoren stabil bleibt. Jedes Hotel und jedes Restaurant auf Ihrer Reiseroute wird vorab gescreent.",
-      imgSrc: solution4
+      imgSrc: fullSpec4
     },
     {
       id: 5,
@@ -60,7 +61,7 @@ export const solutions = [
       problem: "Sensible Gesundheitsdaten.",
       solution: "Höchste Diskretion auf Family-Office Niveau. Ihre Daten bleiben anonymisiert, verschlüsselt und verlassen nie unseren geschützten Loop.",
       details: "Ihre Daten werden in einer privaten, isolierten Cloud-Infrastruktur gespeichert und sind nur für unser medizinisches Kernteam zugänglich. Wir garantieren absolute Diskretion und Sicherheit auf dem Niveau von staatlichen Sicherheitsbehörden. Keine Cloud-Backups bei Drittanbietern, volle Souveränität über Ihre biologischen Daten.",
-      imgSrc: solution5
+      imgSrc: fullSpec5
     },
     {
       id: 6,
@@ -68,7 +69,7 @@ export const solutions = [
       problem: "Biologisches Limit als Wachstumsbremse",
       solution: "Wir transformieren Ihre Biologie von einer unberechenbaren Variable in Ihren stärksten Multiplikator. Durch die Maximierung Ihres energetischen Outputs schaffen wir das Fundament für grenzenlose unternehmerische Skalierung.",
       details: "Gesundheit ist kein Kostenfaktor, sondern ein Hebel für unternehmerischen Erfolg. Durch die Maximierung Ihrer physischen und kognitiven Ressourcen steigern wir Ihre Entscheidungskapazität und Belastbarkeit, was sich direkt in Ihrer beruflichen Performance niederschlägt. Wir reporten halbjährlich den 'Biological ROI' Ihrer Investition.",
-      imgSrc:solution6
+      imgSrc:fullSpec6
     },
   ];
 export const goalOptions = [
@@ -218,7 +219,7 @@ export const syncCardsData = [
     focusTitle: "Automatic Tracking 24/7",
     focusDesc: "Permanente Erfassung der autonomen Belastungsfähigkeit und Analyse Ihrer Schlaf-Architektur für maximale Regenerations-Präzision",
     imageLabel: "Biometric Hub",
-    imageSrc: bio1,
+    imageSrc: biometricHub,
     details: [
       "Automatische Synchronisation mit Dashboard",
       "Tägliche Belastungsempfehlung basierend auf HRV",
@@ -235,7 +236,7 @@ export const syncCardsData = [
     focusTitle: "Metabolic Mapping",
     focusDesc: "Nach unserem Timing System analysieren wir 30+ Biomarker zur Steuerung der Performance, Gesundheit und Langlebigkeit",
     imageLabel: "Labor",
-    imageSrc: bio2,
+    imageSrc: clinicalLab,
     details: [
       "Quartalsweise Blutabnahme an Wunschort",
       "Umfassendes Hormon-Panel (Testosteron, Cortisol)",
@@ -252,7 +253,7 @@ export const syncCardsData = [
     focusTitle: "",
     focusDesc: "Entschlüsselung Ihres genetischen Bauplans zur präzisen Steuerung von Langlebigkeit und physischer Belastbarkeit",
     imageLabel: "Genetisches Profiling",
-    imageSrc: bio3,
+    imageSrc: geneAnalysis,
     details: [
       "Alterungsrate",
       "Entzündungswerte",
@@ -268,7 +269,7 @@ export const syncCardsData = [
     focusTitle: "Performance Synchronisation",
     focusDesc: "Wir aggregieren alle Datenströme zu einem kohärenten Bild für maximale operative Präzision",
     imageLabel: "Sync",
-    imageSrc: bio3,
+    imageSrc: dataFusion,
     details: [
       "Ende-zu-Ende verschlüsselte Protokolle",
       "Manuelle Auswertung durch Performance-Specialists",

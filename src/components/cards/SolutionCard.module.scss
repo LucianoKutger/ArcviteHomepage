@@ -4,7 +4,7 @@
 .card {
   display: flex;
   flex-direction: column;
-  background-color: $white-05;
+  background: linear-gradient(to bottom right, $cyan-10, transparent);
   border: 1px solid $white-05;
   border-radius: 1.5rem; 
   overflow: hidden;

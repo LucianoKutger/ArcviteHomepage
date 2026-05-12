@@ -112,7 +112,8 @@
 }
 
 .goalInactive:hover {
-  border-color: $white-30;;
+  border-color: $cyan-40;
+  box-shadow: 0 0 30px $cyan-20;;
   color: $text;
 }
 

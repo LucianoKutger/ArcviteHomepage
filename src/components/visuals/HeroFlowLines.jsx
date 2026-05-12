@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, memo } from "react";
 import styles from "./HeroFlowLines.module.scss"; 
 
 const hexToRgb = (hex) => {
@@ -115,4 +115,4 @@ const HeroFlowLines = ({
   );
 };
 
-export default HeroFlowLines;
+export default memo(HeroFlowLines);

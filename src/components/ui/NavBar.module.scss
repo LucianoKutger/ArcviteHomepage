@@ -54,8 +54,8 @@
 
 .lpHeaderAuditBtn {
   display: none;
-  background-color: $white-10;
-  border: 1px solid $white-05;
+  background: linear-gradient(to bottom right, $cyan-30, transparent);
+  border: 1px solid $cyan-30;
   color: var(--arc-accent);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
@@ -71,7 +71,9 @@
 }
 
 .lpHeaderAuditBtn:hover {
-  background-color: $white-15;
+  background: linear-gradient(to bottom right, $cyan-60, transparent);
+  border: 1px solid $cyan-60;
+  
 }
 
 .lpNavActions {

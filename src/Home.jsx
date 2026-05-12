@@ -4,7 +4,7 @@ import { ChevronRight, Brain, ArrowUpRight, Infinity, Send, Shield } from 'lucid
 
 import ExpandableCard from './components/cards/ExpandableCards';
 import SolutionCard from './components/cards/SolutionCard';
-import ArcviteLogo from './components/ui/ArcviteLogo';
+import ArcviteLogoPic from './assets/ArcviteLogoPic.png'
 import FormInput from './components/ui/FormInput';
 import HeroFlowLines from './components/visuals/HeroFlowLines';
 import MethodologySystem from './components/visuals/MethodologySystem';
@@ -202,6 +202,12 @@ const Home = () => {
               <span className={founderStyles.headingFaded}>TRY THINKING BIGGER."</span>
             </h2>
 
+            <div className={founderStyles.description}>
+              <p>
+                Das Bogenmodell ist das Destillat aus intensiver Systemtheorie und der Analyse von Menschen mit einer unnachgiebigen Obszession für ihre Ziele. Es ist ein Framework, das die unsichtbaren Reibungsverluste sichtbar macht. Wir eliminieren die Lücke zwischen Ihrer Vision und der tatsächlichen Ausführung.
+              </p>
+            </div>
+            
             <div className={founderStyles.quoteBlock}>
               <p className={founderStyles.quoteText}>
                 "Alle Schwäche ist Willensschwäche."
@@ -220,11 +226,6 @@ const Home = () => {
               </p>
             </div>
 
-            <div className={founderStyles.description}>
-              <p>
-                Das Bogenmodell ist das Destillat aus intensiver Systemtheorie und der Analyse von Menschen mit einer unnachgiebigen Obszession für ihre Ziele. Es ist ein Framework, das die unsichtbaren Reibungsverluste sichtbar macht. Wir eliminieren die Lücke zwischen Ihrer Vision und der tatsächlichen Ausführung.
-              </p>
-            </div>
           </div>
 
           {/* Image Placeholder (Right Side) - Fading into background */}
@@ -321,7 +322,7 @@ const Home = () => {
           <div className={auditStyles.auditCard}>
             <div className={auditStyles.header}>
               <h2 className={auditStyles.title}>
-                <span className={auditStyles.titleLight}>Audit</span> <span className={auditStyles.titleBold}>Application</span>
+                 <span className={auditStyles.titleBold}>Audit Application</span>
               </h2>
             </div>
 
@@ -398,15 +399,18 @@ const Home = () => {
         <div className={faqStyles.bottomFooter}>
             <div className={faqStyles.logoContainer}>
               <div className={faqStyles.logoWrapper} onClick={() => scrollToSection('home')}>
-                <ArcviteLogo />
+                <img src={ArcviteLogoPic} alt='Arcvite Logo'/>
               </div>
             </div>
             <div className={faqStyles.linksContainer}>
-        
+
               <a href="/impressum" className={faqStyles.footerLink}>Impressum</a>
               <a href="/datenschutz" className={faqStyles.footerLink}>Datenschutz</a>
             </div>
+            <div className={faqStyles.copyrightContainer}>
             <p className={faqStyles.copyright}>© 2026 Arcvite</p>
+
+            </div>
           </div>
       </footer>
 

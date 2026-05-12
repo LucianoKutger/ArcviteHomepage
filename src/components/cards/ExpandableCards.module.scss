@@ -11,6 +11,11 @@
   min-height: 420px;
 }
 
+.card:hover{
+  border-color: $cyan-30;
+  box-shadow: 0 0 30px $cyan-10;
+}
+
 .cardOpen {
   border-color: $cyan-40;
   background-color: $background;
