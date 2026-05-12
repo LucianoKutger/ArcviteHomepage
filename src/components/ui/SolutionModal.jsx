@@ -1,25 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { motion } from "framer-motion";
 import { X, ArrowUpRight } from 'lucide-react';
 import styles from './SolutionModal.module.scss';
 
 const SolutionModal = ({ item, onClose }) => {
-useEffect(() => {
-        // Finde den React-Root-Container (falls vorhanden)
-        const rootElement = document.getElementById('root');
-        
-        // Sperre ALLES, was scrollen könnte
-        document.body.style.overflow = 'hidden';
-        document.documentElement.style.overflow = 'hidden';
-        if (rootElement) rootElement.style.overflow = 'hidden';
 
-        return () => {
-            // Setze beim Schließen alles sauber zurück
-            document.body.style.overflow = '';
-            document.documentElement.style.overflow = '';
-            if (rootElement) rootElement.style.overflow = '';
-        };
-    }, []);
 
 
     if (!item) return null;
