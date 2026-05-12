@@ -136,9 +136,9 @@ const ArcSystem = () => {
           {/* Center Point "YOU" */}
           <g className="cursor-pointer" onMouseEnter={() => setIsCenterHovered(true)} onMouseLeave={() => setIsCenterHovered(false)}>
             <motion.circle cx={centerX} cy={centerY} animate={{ r: isCenterHovered ? 20 : 10, opacity: isCenterHovered ? 0.25 : 0.08 }} fill="white" />
-            <motion.circle cx={centerX} cy={centerY} animate={{ r: isCenterHovered ? 7 : 4, fill: isCenterHovered ? "#fff" : "rgba(45, 212, 191,0.7)" }} fill="white" />
+            <motion.circle cx={centerX} cy={centerY} animate={{ r: isCenterHovered ? 7 : 4, fill: isCenterHovered ? "#fff" : "rgba(255, 255, 255,0.7)" }} fill="white" />
             <motion.line x1={centerX} y1={centerY + 55} x2={centerX} y2={centerY + 12} stroke="#CED4DA" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.4" markerEnd="url(#indicator-arrowhead)" />
-            <text x={centerX} y={centerY + 75} textAnchor="middle" fill="#2DD4BF" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(229, 217, 182, 0.3))' }}>YOU</text>
+            <text x={centerX} y={centerY + 75} textAnchor="middle" fill="#FFFF" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(229, 217, 182, 0.3))' }}>YOU</text>
           </g>
 
           {/* The Arcs (Stripes) */}
@@ -164,9 +164,9 @@ const ArcSystem = () => {
           {/* Polar Star */}
           <g>
             <motion.line x1={polarStarPoint.x} y1={polarStarPoint.y - 75} x2={polarStarPoint.x} y2={polarStarPoint.y - 12} stroke="#CED4DA" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.4" markerEnd="url(#indicator-arrowhead)" />
-            <motion.circle cx={polarStarPoint.x} cy={polarStarPoint.y} initial={{ r: 4, opacity: 0.4 }} animate={{ r: 14, opacity: 0 }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }} fill="#2DD4BF" />
-            <circle cx={polarStarPoint.x} cy={polarStarPoint.y} r="3" fill="#2DD4BF" style={{ filter: 'drop-shadow(0 0 10px #2DD4BF)' }} />
-            <text x={polarStarPoint.x} y={polarStarPoint.y - 85} textAnchor="middle" fill="#2DD4BF" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.5))' }}>Polar Star</text>
+            <motion.circle cx={polarStarPoint.x} cy={polarStarPoint.y} initial={{ r: 4, opacity: 0.4 }} animate={{ r: 14, opacity: 0 }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }} fill="#FFF" />
+            <circle cx={polarStarPoint.x} cy={polarStarPoint.y} r="3" fill="#FFFFFF" style={{ filter: 'drop-shadow(0 0 10px #FFF)' }} />
+            <text x={polarStarPoint.x} y={polarStarPoint.y - 85} textAnchor="middle" fill="#FFF" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.5))' }}>Polar Star</text>
           </g>
         </svg>
       </div>
