@@ -12,6 +12,7 @@ import SolutionModal from './components/ui/SolutionModal'
 import FAQItem from './components/cards/Faq';
 import FadeOutSection from './components/visuals/FadeoutSection';
 
+
 import { solutions, goalOptions, syncCardsData, faqs } from './data/content';
 
 import methodologyStyles from './styles/MethodologySection.module.scss';
@@ -98,6 +99,8 @@ const Home = () => {
       </section>
       
       <FadeOutSection id="vision" className={visionStyles.section}>
+       
+
         <div className={visionStyles.backgroundWrapper}>
           <div className={visionStyles.glowEffect} />
         </div>
