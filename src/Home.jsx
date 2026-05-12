@@ -123,12 +123,10 @@ const Home = () => {
             </p>
             <p className={visionStyles.pText}>
               Trotz eiserner Disziplin wird der eigene Körper zum Flaschenhals für das nächste Wachstumslevel.&nbsp;
-              <span className={visionStyles.cursivText}>Brain Fog</span>&nbsp; 
-              bei kritischen Entscheidungen, der unweigerliche<br/>
-              &nbsp;<span className={visionStyles.cursivText}>Energie-Crash am Nachmittag</span>&nbsp;
-              und das schleichende Gefühl, dass der geschäftliche Erfolg mit der 
-              &nbsp;<span className={visionStyles.cursivText}>eigenen Substanz</span> &nbsp;
-              bezahlt wird.
+              <span className={visionStyles.cursivText}>Brain Fog</span>&nbsp;bei kritischen Entscheidungen, der unweigerliche<br/>
+              <span className={visionStyles.cursivText}>Energie-Crash am Nachmittag</span>
+              &nbsp;und das schleichende Gefühl, dass der geschäftliche Erfolg mit der
+              &nbsp;<span className={visionStyles.cursivText}>eigenen Substanz</span>&nbsp;bezahlt wird.
             </p>
             <p>
               <strong className={visionStyles.strongText}>Arcvite wurde gegründet, um diese Lücke zu schließen.</strong>
