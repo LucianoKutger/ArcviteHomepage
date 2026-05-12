@@ -64,7 +64,7 @@ color: $headlines;
 
 
 .subHeadline {
-color: $white-80;
+color: $headlines;
 }
 
 .paragraph {
@@ -100,7 +100,7 @@ margin-right: auto;
 max-width: 80rem;
 width: 100%;
 font-size: 1.25rem;
-opacity: 0.6;
+color: $text;
 }
 
 @media (min-width: 768px) {

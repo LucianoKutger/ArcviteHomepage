@@ -30,7 +30,7 @@
 .question {
   font-size: 1.125rem; 
   font-weight: 500;
-  color: $white-90;
+  color: $headlines;
   transition: color 0.2s ease;
   padding-right: 2rem; 
 }
@@ -68,7 +68,7 @@
 
 .answerText {
   padding-bottom: 2rem;
-  color: $white-60;
+  color: $text;
   line-height: 1.625;
   font-weight: 300;
   margin: 0;

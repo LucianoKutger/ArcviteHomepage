@@ -111,7 +111,7 @@ const Home = () => {
             <p>
               <strong className={visionStyles.strongText}>Ein Unternehmen ist nur so belastbar wie seine Führungsebene.</strong> 
             </p>
-            <p>
+            <p className={visionStyles.pText}>
               Doch während jede Kennzahl im Business akribisch optimiert wird, 
               bleibt die wichtigste Komponente, die menschliche Biologie, 
               oft dem Zufall überlassen.
@@ -121,7 +121,7 @@ const Home = () => {
               <br/>
               <strong className={visionStyles.strongText}>&#10140; Ein unsichtbares Limit.</strong>
             </p>
-            <p>
+            <p className={visionStyles.pText}>
               Trotz eiserner Disziplin wird der eigene Körper zum Flaschenhals für das nächste Wachstumslevel.&nbsp;
               <span className={visionStyles.cursivText}>Brain Fog</span> 
               bei kritischen Entscheidungen, der unweigerliche<br/>
@@ -133,14 +133,14 @@ const Home = () => {
             <p>
               <strong className={visionStyles.strongText}>Arcvite wurde gegründet, um diese Lücke zu schließen.</strong>
             </p>
-            <p>
+            <p className={visionStyles.pText}>
               Wir verstehen Gesundheit nicht als Lifestyle-Attribut, sondern als Hochleistungs-Struktur. 
               Basierend auf unserem proprietären Bogenmodell (dem Arc-System) bauen wir ein Fundament, das weit über herkömmliches Coaching hinausgeht.
             </p>
             <p>
               <strong className={visionStyles.strongText}>Unser Ziel</strong>
             </p>
-            <p>
+            <p className={visionStyles.pText}>
               Sie stehen nicht trotz, sondern wegen Ihrer physischen und mentalen Verfassung an der Spitze.
             </p>
           </div>

@@ -27,7 +27,7 @@ const SolutionCard = ({ item, onOpen, imgSrc }) => {
                       
                    </div>
                </div>
-  
+                
                <h3 className={styles.title}>{item.title}</h3>
   
                <div className={styles.bodyWrapper}>

@@ -208,7 +208,7 @@ const ArcSystem = () => {
                   className={styles.infoTitle}
                   animate={{ 
                     scale: isActive ? 1.05 : 1, 
-                    color: isActive ? '#ffffff' : 'rgba(255,255,255,0.6)' 
+                    color: '#F0F4F8'
                   }}
                   style={{ originX: 0 }}
                   transition={{ duration: 0.3 }}

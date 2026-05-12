@@ -8,6 +8,10 @@
   background-color: $background;
 }
 
+.pText{
+  color: $text
+}
+
 .backgroundWrapper {
   position: absolute;
   inset: 0;
@@ -66,7 +70,7 @@
 }
 
 .strongText {
-  color: $text;
+  color: $headlines;
   font-weight: 500;
 }
 
@@ -108,7 +112,7 @@
 
 .featureDesc {
   font-size: 0.875rem;
-  color: $white-50;
+  color: $text;
   margin: 0;
 }
 
