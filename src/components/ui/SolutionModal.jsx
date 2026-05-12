@@ -5,8 +5,6 @@ import styles from './SolutionModal.module.scss';
 
 const SolutionModal = ({ item, onClose }) => {
 
-
-
     if (!item) return null;
 
     return (
