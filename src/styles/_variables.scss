@@ -1,0 +1,61 @@
+//Base Colors
+$white: #FFFFFF;
+$black: #000000;
+
+//Brand Colors
+$greenMint: #5EEAD4;
+$cyan: #2DD4BF;
+$skyblue: #38BDF8;
+
+//Semantic Colors
+$background: $black;
+$headlines: #F0F4F8;
+$text: #CED4DA;
+$accent: rgba($cyan, 0.75); 
+
+//White Opacity Color
+$white-90: rgba($white, 0.9);  
+$white-80: rgba($white, 0.8);  
+$white-70: rgba($white, 0.7);  
+$white-60: rgba($white, 0.6);  
+$white-50: rgba($white, 0.5);  
+$white-40: rgba($white, 0.4);  
+$white-30: rgba($white, 0.3);  
+$white-25: rgba($white, 0.25);  
+$white-20: rgba($white, 0.2);
+$white-15: rgba($white, 0.15);
+$white-10: rgba($white, 0.1);  
+$white-05: rgba($white, 0.05); 
+
+//Black Opacity color
+$black-90: rgba($black, 0.9);  
+$black-80: rgba($black, 0.8);  
+$black-70: rgba($black, 0.7);  
+$black-60: rgba($black, 0.6);  
+$black-50: rgba($black, 0.5);  
+$black-40: rgba($black, 0.4);  
+$black-30: rgba($black, 0.3);  
+$black-25: rgba($black, 0.25);  
+$black-20: rgba($black, 0.2);
+$black-15: rgba($black, 0.15);
+$black-10: rgba($black, 0.1);  
+$black-05: rgba($black, 0.05); 
+
+
+//cyan Opacity color
+$cyan-90: rgba($cyan, 0.9);  
+$cyan-80: rgba($cyan, 0.8);  
+$cyan-70: rgba($cyan, 0.7);  
+$cyan-60: rgba($cyan, 0.6);  
+$cyan-50: rgba($cyan, 0.5);  
+$cyan-40: rgba($cyan, 0.4);  
+$cyan-30: rgba($cyan, 0.3);  
+$cyan-20: rgba($cyan, 0.2);
+$cyan-15: rgba($cyan, 0.15);
+$cyan-10: rgba($cyan, 0.1);  
+$cyan-05: rgba($cyan, 0.05); 
+
+
+
+//Typo
+$mainFont: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;

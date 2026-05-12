@@ -1,3 +1,5 @@
+@use '/src/styles/variables' as *;
+
 @keyframes scan {
   0% { top: -10%; opacity: 0; }
   50% { opacity: 1; }
@@ -7,11 +9,11 @@
   animation: scan 3s linear infinite;
 }
 ::selection {
-  background-color: rgba(229, 217, 182, 0.2);
-  color: #E5D9B6;
+  background-color: rgba($cyan, 0.2);
+  color: $cyan;
 }
 .glow-text {
-  text-shadow: 0 0 10px rgba(229, 217, 182, 0.5);
+  text-shadow: 0 0 10px rgba($cyan, 0.5);
 }
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
@@ -26,12 +28,12 @@ input:-webkit-autofill:active{
   width: 8px;
 }
 .custom-scrollbar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.05);
+  background: $cyan-05;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.2);
+  background: $white-20;
   border-radius: 4px;
 }
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.3);
+  background: $white-30;
 }

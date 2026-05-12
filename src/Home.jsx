@@ -14,14 +14,14 @@ import FadeOutSection from './components/visuals/FadeoutSection';
 
 import { solutions, goalOptions, syncCardsData, faqs } from './data/content';
 
-import methodologyStyles from './css/MethodologySection.module.css';
-import homeStyles from './css/Home.module.css';
-import bioSyncStyles from './css/BioSync.module.css';
-import visionStyles from './css/VisionSection.module.css';
-import protocolsSectionStyles from './css/ProtocolsSection.module.css';
-import auditStyles from './css/Audit.module.css';
-import founderStyles from './css/Founder.module.css';
-import faqStyles from './css/Faq.module.css';
+import methodologyStyles from './styles/MethodologySection.module.scss';
+import homeStyles from './styles/Home.module.scss';
+import bioSyncStyles from './styles/BioSync.module.scss';
+import visionStyles from './styles/VisionSection.module.scss';
+import protocolsSectionStyles from './styles/ProtocolsSection.module.scss';
+import auditStyles from './styles/Audit.module.scss';
+import founderStyles from './styles/Founder.module.scss';
+import faqStyles from './styles/Faq.module.scss';
 
 const Home = () => {
   const [selectedGoals, setSelectedGoals] = useState([]);
@@ -118,18 +118,24 @@ const Home = () => {
             </p>
             <p>
               <strong className={visionStyles.strongText}>Die Konsequenz?</strong>
+              <br/>
+              <strong className={visionStyles.strongText}>&#10140; Ein unsichtbares Limit.</strong>
             </p>
             <p>
-              Ein unsichtbares Limit. Trotz eiserner Disziplin wird der eigene Körper zum Flaschenhals für das nächste Wachstumslevel. 
-              <strong className={visionStyles.strongText}>Brain Fog</strong> bei kritischen Entscheidungen,
-              der unweigerliche <strong className={visionStyles.strongText}>Energie-Crash am Nachmittag</strong>
-              und das schleichende Gefühl, dass der geschäftliche Erfolg mit der <strong className={visionStyles.strongText}>eigenen Substanz</strong> bezahlt wird.
+              Trotz eiserner Disziplin wird der eigene Körper zum Flaschenhals für das nächste Wachstumslevel.&nbsp;
+              <span className={visionStyles.cursivText}>Brain Fog</span> 
+              bei kritischen Entscheidungen, der unweigerliche<br/>
+              <span className={visionStyles.cursivText}>Energie-Crash am Nachmittag</span>
+              und das schleichende Gefühl, dass der geschäftliche Erfolg mit der 
+              <span className={visionStyles.cursivText}>eigenen Substanz</span> 
+              bezahlt wird.
             </p>
             <p>
               <strong className={visionStyles.strongText}>Arcvite wurde gegründet, um diese Lücke zu schließen.</strong>
             </p>
             <p>
-              Wir verstehen Gesundheit nicht als Lifestyle-Attribut, sondern als Hochleistungs-Struktur. Basierend auf unserem proprietären Bogenmodell (dem Arc-System) bauen wir ein Fundament, das weit über herkömmliches Coaching hinausgeht.
+              Wir verstehen Gesundheit nicht als Lifestyle-Attribut, sondern als Hochleistungs-Struktur. 
+              Basierend auf unserem proprietären Bogenmodell (dem Arc-System) bauen wir ein Fundament, das weit über herkömmliches Coaching hinausgeht.
             </p>
             <p>
               <strong className={visionStyles.strongText}>Unser Ziel</strong>
@@ -141,9 +147,9 @@ const Home = () => {
           
           <div className={visionStyles.featuresGrid}>
             {[
-              { title: "Lifespan", desc: "Verlängerung der gesundheitlichen Spannweite durch präventive Medizin.", icon: <Infinity className="w-5 h-5 text-[#E5D9B6]" /> },
-              { title: "Resilience", desc: "Aufbau eines Immunsystems, das unter hohem Druck nicht einknickt.", icon: <Shield className="w-5 h-5 text-[#E5D9B6]" /> },
-              { title: "Clarity", desc: "Dauerhafter kognitives Fokus - ohne Abhängigkeit von Stimulanzien.", icon: <Brain className="w-5 h-5 text-[#E5D9B6]" /> },
+              { title: "Lifespan", desc: "Verlängerung der gesundheitlichen Spannweite durch präventive Medizin.", icon: <Infinity className="w-5 h-5 text-[#2DD4BF]" /> },
+              { title: "Resilience", desc: "Aufbau eines Immunsystems, das unter hohem Druck nicht einknickt.", icon: <Shield className="w-5 h-5 text-[#2DD4BF]" /> },
+              { title: "Clarity", desc: "Dauerhafter kognitives Fokus - ohne Abhängigkeit von Stimulanzien.", icon: <Brain className="w-5 h-5 text-[#2DD4BF]" /> },
             ].map((item, i) => (
               <div key={i} className={visionStyles.featureItem}>
                 <div className={visionStyles.iconWrapper}>
@@ -237,7 +243,7 @@ const Home = () => {
       </FadeOutSection>
 
       <FadeOutSection id="biosync" className={bioSyncStyles.syncSection} delayPercentage={0.6}>
-          <HeroFlowLines direction='left' color='#1B4F8F'/>
+          <HeroFlowLines direction='left'/>
           
         <div className={bioSyncStyles.syncContainer}>
           <div className={bioSyncStyles.syncHeader}>
@@ -285,7 +291,7 @@ const Home = () => {
             
             <div className={protocolsSectionStyles.grid}>
               {solutions.map((item, idx) => (
-                <SolutionCard key={item.id} item={item} onOpen={setSelectedSolution} imgSrc={item.imgSrc} />
+                  <SolutionCard key={item.id} item={item} onOpen={setSelectedSolution} imgSrc={item.imgSrc} />
               ))}
             </div>
 

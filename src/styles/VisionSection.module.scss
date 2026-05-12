@@ -1,9 +1,11 @@
+@use "variables" as *;
+
 .section {
   position: relative;
   z-index: 10;
   padding: 8rem 1.5rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  background-color: #080808;
+  border-top: 1px solid $cyan-05;
+  background-color: $background;
 }
 
 .backgroundWrapper {
@@ -21,7 +23,7 @@
   transform: translate(-50%, -50%);
   width: 80%;
   height: 500px;
-  background-color: rgba(229, 217, 182, 0.05);
+  background-color: $cyan-05;
   filter: blur(150px);
   border-radius: 9999px;
   mix-blend-mode: screen;
@@ -42,12 +44,12 @@
   font-weight: 600;
   letter-spacing: -0.025em;
   margin-bottom: 2rem;
-  color: white;
+  color: $headlines;
 }
 
 .textContent {
   font-size: 1.125rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: $text;
   font-weight: 300;
   line-height: 1.625;
   margin-bottom: 3rem;
@@ -57,8 +59,14 @@
   margin-top: 1.5rem;
 }
 
+.cursivText {
+  color: $text;
+  font-style: italic;
+  
+}
+
 .strongText {
-  color: white;
+  color: $text;
   font-weight: 500;
 }
 
@@ -68,7 +76,7 @@
   gap: 2rem;
   text-align: left;
   margin-top: 4rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid $cyan-05;
   padding-top: 3rem;
 }
 
@@ -84,8 +92,8 @@
   width: 2.5rem;
   height: 2.5rem;
   border-radius: 9999px;
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: $cyan-05;
+  border: 1px solid $white-10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -94,13 +102,13 @@
 .featureTitle {
   font-size: 1.125rem;
   font-weight: 500;
-  color: white;
+  color: $headlines;
   margin: 0;
 }
 
 .featureDesc {
   font-size: 0.875rem;
-  color: rgba(255, 255, 255, 0.5);
+  color: $white-50;
   margin: 0;
 }
 
@@ -135,7 +143,7 @@
 
 .ctaButton {
   padding: 1rem 2.5rem;
-  background-color: #E5D9B6;
+  background-color: $cyan;
   color: black;
   font-weight: 700;
   letter-spacing: 0.2em;
@@ -151,8 +159,8 @@
 }
 
 .ctaButton:hover {
-  background-color: white;
-  box-shadow: 0 0 30px rgba(229, 217, 182, 0.3);
+  background-color:$text;
+  box-shadow: 0 0 30px $cyan-30;
 }
 
 .chevronIcon {

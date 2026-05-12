@@ -1,4 +1,4 @@
-import styles from './SolutionCard.module.css';
+import styles from './SolutionCard.module.scss';
 
 const SolutionCard = ({ item, onOpen, imgSrc }) => {
     return (
@@ -7,7 +7,7 @@ const SolutionCard = ({ item, onOpen, imgSrc }) => {
           onClick={() => onOpen(item)}
           className={styles.card}
       >
-     
+        
           <div className={styles.imageContainer}>
                <div className={styles.gridPattern} />
                <div className={styles.imageWrapper}>
@@ -15,8 +15,8 @@ const SolutionCard = ({ item, onOpen, imgSrc }) => {
                </div>
                <div className={styles.gradientOverlay} />
           </div>
-  
           <div className={styles.content}>
+            
                <div className={styles.topBar}>
                    <div className={styles.iconGroup}>
                   

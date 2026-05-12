@@ -1,4 +1,4 @@
-import bentoStyles from './BentoCard.module.css'; 
+import bentoStyles from './BentoCard.module.scss'; 
 
 const BentoCard = ({ title, subtitle, icon, children, className = "" }) => (
   <div className={`${bentoStyles.card} ${className}`}>

@@ -1,5 +1,5 @@
 
-import inputStyles from './FormInput.module.css'; // Pfad anpassen
+import inputStyles from './FormInput.module.scss'; // Pfad anpassen
 
 const FormInput = ({ label, placeholder, type = "text" }) => (
     <div className={inputStyles.group}>

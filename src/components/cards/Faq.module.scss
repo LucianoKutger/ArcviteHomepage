@@ -1,5 +1,7 @@
+@use "../../styles/variables" as *;
+
 .faqItem {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid $cyan-05;
 }
 
 .faqItem:last-child {
@@ -8,7 +10,7 @@
 
 .faqButton {
   width: 100%;
-  padding: 1.5rem 0; /* py-6 */
+  padding: 1.5rem 0; 
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -21,31 +23,31 @@
 
 @media (min-width: 768px) {
   .faqButton {
-    padding: 2rem 0; /* md:py-8 */
+    padding: 2rem 0; 
   }
 }
 
 .question {
-  font-size: 1.125rem; /* text-lg */
+  font-size: 1.125rem; 
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.9);
+  color: $white-90;
   transition: color 0.2s ease;
-  padding-right: 2rem; /* pr-8 */
+  padding-right: 2rem; 
 }
 
 @media (min-width: 768px) {
   .question {
-    font-size: 1.25rem; /* md:text-xl */
+    font-size: 1.25rem; 
   }
 }
 
 /* Hover-Effekt über die Button-Group */
 .faqButton:hover .question {
-  color: #E5D9B6;
+  color: $cyan;
 }
 
 .iconWrapper {
-  color: #E5D9B6;
+  color: $cyan;
   opacity: 0.5;
   transition: opacity 0.2s ease;
   flex-shrink: 0;
@@ -65,9 +67,9 @@
 }
 
 .answerText {
-  padding-bottom: 2rem; /* pb-8 */
-  color: rgba(255, 255, 255, 0.6);
-  line-height: 1.625; /* leading-relaxed */
+  padding-bottom: 2rem;
+  color: $white-60;
+  line-height: 1.625;
   font-weight: 300;
   margin: 0;
 }

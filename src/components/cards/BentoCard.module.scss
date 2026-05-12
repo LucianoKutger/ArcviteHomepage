@@ -1,20 +1,22 @@
+@use "../../styles/variables" as *;
+
 .card {
   position: relative;
   overflow: hidden;
-  border-radius: 1.5rem; /* rounded-3xl */
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  background-color: #0a0a0a;
-  padding: 2rem; /* p-8 */
+  border-radius: 1.5rem; 
+  border: 1px solid $white-10;
+  background-color: $background;
+  padding: 2rem;
   transition: border-color 0.5s ease;
   display: flex;
   flex-direction: column;
 }
 
 .card:hover {
-  border-color: rgba(229, 217, 182, 0.3);
+  border-color: $cyan-30;
 }
 
-/* Der goldene Schein im Hintergrund */
+
 .glowOverlay {
   position: absolute;
   inset: 0;
@@ -42,27 +44,27 @@
 }
 
 .iconWrapper {
-  margin-bottom: 1.5rem; /* mb-6 */
+  margin-bottom: 1.5rem; 
   display: inline-flex;
-  padding: 0.75rem; /* p-3 */
-  border-radius: 0.75rem; /* rounded-xl */
-  background-color: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  color: #e5d9b6;
+  padding: 0.75rem; 
+  border-radius: 0.75rem; 
+  background-color: $white-05;
+  border: 1px solid $white-10;
+  color: $text;
   width: fit-content;
 }
 
 .title {
-  font-size: 1.25rem; /* text-xl */
+  font-size: 1.25rem; 
   font-weight: 500;
-  color: #ffffff;
-  margin-bottom: 0.5rem; /* mb-2 */
+  color: $headlines;
+  margin-bottom: 0.5rem; 
 }
 
 .subtitle {
-  font-size: 0.875rem; /* text-sm */
-  color: rgba(255, 255, 255, 0.5);
-  margin-bottom: 1.5rem; /* mb-6 */
+  font-size: 0.875rem; 
+  color: $white-50;
+  margin-bottom: 1.5rem; 
 }
 
 .childrenContainer {

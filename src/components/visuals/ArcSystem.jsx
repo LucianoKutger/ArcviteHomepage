@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import styles from "./ArcParticleSystem.module.css"; // Pfad anpassen
+import styles from "./ArcParticleSystem.module.scss"; // Pfad anpassen
 
 const ArcParticleSystem = ({ 
   showLabels = true, 

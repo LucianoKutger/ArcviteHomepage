@@ -1,3 +1,5 @@
+@use "../../styles/variables" as *;
+
 .container {
   position: absolute;
   inset: 0;
@@ -31,6 +33,6 @@
 .labelExcellence {
   top: 15%;
   right: 10%;
-  color: #E5D9B6;
+  color: $cyan;
   text-align: right;
 }

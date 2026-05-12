@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import styles from './MethodologySystem.module.css';
+import styles from './MethodologySystem.module.scss';
 
 const ArcSystem = () => {
   const [activeSegment, setActiveSegment] = useState(null);
@@ -12,7 +12,7 @@ const ArcSystem = () => {
       id: 1, 
       title: "Core Effects", 
       subtitle: "The DNA of Performance", 
-      hex: "#285430", 
+      hex: "#2563EB", 
       radius: 180, 
       thickness: 6, 
       description: "Die psychologische Architektur deines Erfolgs. Dieser Kern arbeitet durch unsere Algorithmen vollautomatisch im Hintergrund.", 
@@ -25,7 +25,7 @@ const ArcSystem = () => {
       id: 2, 
       title: "Neuro-Biochemistry", 
       subtitle: "Systemic Performance Base", 
-      hex: "#5F8D4E", 
+      hex: "#0EA5E9", 
       radius: 300, 
       thickness: 6, 
       description: "Die biochemische Architektur Ihres Körpers. Faktoren der internen Leistungsfähigkeit, die wir mit moderner Wissenschaft messbar optimieren können.", 
@@ -39,7 +39,7 @@ const ArcSystem = () => {
       id: 3, 
       title: "Operational Sphere", 
       subtitle: "Executive Ecosystem", 
-      hex: "#A4BE7B", 
+      hex: "#2DD4BF", 
       radius: 420, 
       thickness: 6, 
       description: "Die makroskopische Perspektive. Die äußeren Kräfte und systemischen Variablen, die permanent auf Ihre Biologie und Psychologie einwirken. Ihr System muss diese Faktoren nicht nur aushalten, sondern verarbeiten.", 
@@ -53,7 +53,7 @@ const ArcSystem = () => {
       id: 4, 
       title: "Dream", 
       subtitle: "Your Ultimate Vision", 
-      hex: "#E5D9B6", 
+      hex: "#5EEAD4", 
       radius: 540, 
       thickness: 6, 
       description: "Ihr Polarstern. Im Bogenmodell ist der Traum die oberste Instanz, nach der wir alles ausrichten. Er definiert die Leitplanken für Ihre Strategic Vision, Ihre Neuro-Biochemistry und Ihre Core Effects. Alles folgt dem Ziel.",
@@ -101,7 +101,7 @@ const ArcSystem = () => {
                 <stop offset="100%" stopColor="white" stopOpacity="0" />
             </linearGradient>
             <marker id="arrow-to-center-bright" markerWidth="20" markerHeight="12" refX="18" refY="6" orient="auto"><polygon points="0 0, 18 6, 0 12" fill="white" /></marker>
-            <marker id="indicator-arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#E5D9B6" fillOpacity="0.4" /></marker>
+            <marker id="indicator-arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto"><polygon points="0 0, 10 3.5, 0 7" fill="#CED4DA" fillOpacity="0.4" /></marker>
             <filter id="glow-model-meth"><feGaussianBlur stdDeviation="2.5" result="blur" /><feComposite in="SourceGraphic" in2="blur" operator="over" /></filter>
           </defs>
 
@@ -136,9 +136,9 @@ const ArcSystem = () => {
           {/* Center Point "YOU" */}
           <g className="cursor-pointer" onMouseEnter={() => setIsCenterHovered(true)} onMouseLeave={() => setIsCenterHovered(false)}>
             <motion.circle cx={centerX} cy={centerY} animate={{ r: isCenterHovered ? 20 : 10, opacity: isCenterHovered ? 0.25 : 0.08 }} fill="white" />
-            <motion.circle cx={centerX} cy={centerY} animate={{ r: isCenterHovered ? 7 : 4, fill: isCenterHovered ? "#fff" : "rgba(255,255,255,0.7)" }} fill="white" />
-            <motion.line x1={centerX} y1={centerY + 55} x2={centerX} y2={centerY + 12} stroke="#E5D9B6" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.4" markerEnd="url(#indicator-arrowhead)" />
-            <text x={centerX} y={centerY + 75} textAnchor="middle" fill="#E5D9B6" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(229, 217, 182, 0.3))' }}>YOU</text>
+            <motion.circle cx={centerX} cy={centerY} animate={{ r: isCenterHovered ? 7 : 4, fill: isCenterHovered ? "#fff" : "rgba(45, 212, 191,0.7)" }} fill="white" />
+            <motion.line x1={centerX} y1={centerY + 55} x2={centerX} y2={centerY + 12} stroke="#CED4DA" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.4" markerEnd="url(#indicator-arrowhead)" />
+            <text x={centerX} y={centerY + 75} textAnchor="middle" fill="#2DD4BF" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(229, 217, 182, 0.3))' }}>YOU</text>
           </g>
 
           {/* The Arcs (Stripes) */}
@@ -163,10 +163,10 @@ const ArcSystem = () => {
 
           {/* Polar Star */}
           <g>
-            <motion.line x1={polarStarPoint.x} y1={polarStarPoint.y - 75} x2={polarStarPoint.x} y2={polarStarPoint.y - 12} stroke="#E5D9B6" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.4" markerEnd="url(#indicator-arrowhead)" />
-            <motion.circle cx={polarStarPoint.x} cy={polarStarPoint.y} initial={{ r: 4, opacity: 0.4 }} animate={{ r: 14, opacity: 0 }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }} fill="#E5D9B6" />
-            <circle cx={polarStarPoint.x} cy={polarStarPoint.y} r="3" fill="#E5D9B6" style={{ filter: 'drop-shadow(0 0 10px #E5D9B6)' }} />
-            <text x={polarStarPoint.x} y={polarStarPoint.y - 85} textAnchor="middle" fill="#E5D9B6" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(229, 217, 182, 0.5))' }}>Polar Star</text>
+            <motion.line x1={polarStarPoint.x} y1={polarStarPoint.y - 75} x2={polarStarPoint.x} y2={polarStarPoint.y - 12} stroke="#CED4DA" strokeWidth="0.8" strokeDasharray="3 3" strokeOpacity="0.4" markerEnd="url(#indicator-arrowhead)" />
+            <motion.circle cx={polarStarPoint.x} cy={polarStarPoint.y} initial={{ r: 4, opacity: 0.4 }} animate={{ r: 14, opacity: 0 }} transition={{ duration: 2.5, repeat: Infinity, ease: "easeOut" }} fill="#2DD4BF" />
+            <circle cx={polarStarPoint.x} cy={polarStarPoint.y} r="3" fill="#2DD4BF" style={{ filter: 'drop-shadow(0 0 10px #2DD4BF)' }} />
+            <text x={polarStarPoint.x} y={polarStarPoint.y - 85} textAnchor="middle" fill="#2DD4BF" className="text-[10px] uppercase tracking-[0.4em] font-light italic" style={{ filter: 'drop-shadow(0 0 10px rgba(45, 212, 191, 0.5))' }}>Polar Star</text>
           </g>
         </svg>
       </div>
@@ -191,9 +191,9 @@ const ArcSystem = () => {
                   <div 
                     className={styles.indicatorDot} 
                     style={{ 
-                      backgroundColor: isActive ? segment.hex : 'transparent',
-                      borderColor: isActive ? 'transparent' : 'rgba(255,255,255,0.2)',
-                      boxShadow: isActive ? `0 0 15px ${segment.hex}` : 'none'
+                      backgroundColor: isInactive ? 'transparent' : segment.hex,
+                      borderColor: isInactive ? 'rgba(255,255,255,0.2)' : 'transparent' ,
+                      boxShadow: isInactive ? 'none' : `0 0 15px ${segment.hex}` 
                     }} 
                   />
                   <span 

@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { X, ArrowUpRight } from 'lucide-react';
-import styles from './SolutionModal.module.css';
+import styles from './SolutionModal.module.scss';
 
 const SolutionModal = ({ item, onClose }) => {
     if (!item) return null;

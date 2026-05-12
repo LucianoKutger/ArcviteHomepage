@@ -1,3 +1,5 @@
+@use '../../styles/variables' as *;
+
 .lpNavbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -9,9 +11,9 @@
 }
 
 .lpNavbar.scrolled {
-  background-color: rgba(5, 5, 5, 0.8);
+  background-color: $background;
   backdrop-filter: blur(24px);
-  border-bottom: 1px solid var(--arc-white-05);
+  border-bottom: 1px solid $cyan-05;
   padding: 1rem 0;
 }
 
@@ -36,14 +38,14 @@
 .lpNavBtn {
   background: none;
   border: none;
-  color: var(--arc-white-60);
+  color: $white-60;
   text-transform: uppercase;
   font-size: 1rem;
   letter-spacing: 0.1em;
   cursor: pointer;
   transition: color 0.2s;
   margin: 0 1rem;
-  color:#E5D9B6
+  color: $headlines
 }
 
 .lpNavBtn:hover {
@@ -52,8 +54,8 @@
 
 .lpHeaderAuditBtn {
   display: none;
-  background-color: var(--arc-white-10);
-  border: 1px solid var(--arc-white-05);
+  background-color: $white-10;
+  border: 1px solid $white-05;
   color: var(--arc-accent);
   padding: 0.5rem 1rem;
   border-radius: 9999px;
@@ -69,7 +71,7 @@
 }
 
 .lpHeaderAuditBtn:hover {
-  background-color: rgba(255, 255, 255, 0.15);
+  background-color: $white-15;
 }
 
 .lpNavActions {
@@ -80,7 +82,7 @@
   display: block;
   background: none;
   border: none;
-  color: #E5D9B6;
+  color: $cyan;
   cursor: pointer;
 }
 

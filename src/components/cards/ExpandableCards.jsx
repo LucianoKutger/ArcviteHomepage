@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import styles from "./ExpandableCards.module.css";
+import styles from "./ExpandableCards.module.scss";
 
 const ExpandableCard = ({ 
   title, category, focusTitle, focusDesc, imageLabel, imageSrc, details, className = "", isOpen, onToggle, opacity, wide

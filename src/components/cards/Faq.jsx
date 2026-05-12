@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from 'framer-motion';
 import { ChevronDown } from 'lucide-react';
-import faqStyles from './Faq.module.css';
+import faqStyles from './Faq.module.scss';
 
 const FAQItem = ({ question, answer, isOpen, onToggle }) => {
   return (

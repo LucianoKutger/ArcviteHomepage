@@ -7,7 +7,7 @@ import ArcviteLogo from './ArcviteLogo';
 import { navItems } from '../../data/content'; 
 
 
-import navBarStyles from './NavBar.module.css'; 
+import navBarStyles from './NavBar.module.scss'; 
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
