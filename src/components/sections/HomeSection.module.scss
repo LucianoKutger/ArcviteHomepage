@@ -75,10 +75,13 @@
   border-radius: 1.5rem;
   border: none; 
   cursor: pointer;
-  transition: all 0.3s ease;
-  overflow: hidden; 
 
- 
+  overflow: hidden; 
+  
+
+  transform: translateZ(0);
+  backface-visibility: hidden;
+
   &::before {
     content: "";
     position: absolute;
@@ -87,6 +90,10 @@
     opacity: 0; 
     transition: opacity 0.3s ease; 
     z-index: 0;
+    
+    /* Optimiert die Opacity-Animation */
+    will-change: opacity;
+    transform: translateZ(0);
   }
 }
 
@@ -95,12 +102,12 @@
 }
 
 .lpCtaInner {
-position: relative;
+  position: relative;
   z-index: 1;
-
   padding: 1.5rem 2.5rem;
   background: none;
   backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
   border-radius: 1.5rem;
   border: 1px solid $cyan-10;
   display: flex;
@@ -110,10 +117,8 @@ position: relative;
   color: $text;
   transition: border-color 0.3s;
   box-shadow: 0 25px 50px -12px $black-25;
-  
-  
+  transform: translateZ(0);
 }
-
 
 .lpHeroBtnText {
   color: white;
