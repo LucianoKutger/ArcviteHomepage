@@ -71,7 +71,7 @@
 .lpCtaWrapperBtn {
   position: relative;
   padding: 1px;
-  background: linear-gradient(to bottom right, $white-10, transparent);
+  background: none;
   border-radius: 1.5rem;
   border: none;
   cursor: pointer;
@@ -84,8 +84,8 @@
 
 .lpCtaInner {
   padding: 1.5rem 2.5rem;
-  background-color: $black-80;
-  backdrop-filter: blur(12px);
+  background: none;
+backdrop-filter: blur(2px);
   border-radius: 1.5rem;
   border: 1px solid $cyan-05;
   display: flex;

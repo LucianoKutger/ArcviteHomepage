@@ -9,6 +9,7 @@ import ProtocolsSection from './components/sections/ProtocolsSection';
 import AuditSection from './components/sections/AuditSection';
 import FaqSection from './components/sections/FaqSection';
 
+
 const Home = () => {
 
   const scrollToSection = (id) => {

@@ -12,7 +12,6 @@ import geneAnalysis from '../assets/GeneAnalysis.png';
 import dataFusion from '../assets/DataFusion.jpg';
 
 export const navItems = [
-    { label: 'Home', targetId: 'home' },
     { label: 'Vision', targetId: 'vision' },
     { label: 'The Arc', targetId: 'methodik' },
     { label: 'Our Founder', targetId: 'founder' },
