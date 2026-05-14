@@ -66,6 +66,8 @@
 }
 
 .ctaButton {
+  position: relative;
+  overflow: hidden; /* Verhindert, dass der Gradient über die abgerundeten Ecken hinausgeht */
   padding: 1rem 2.5rem;
   background: linear-gradient(to bottom right, $cyan-30, transparent);
   color: $headlines;
@@ -73,24 +75,38 @@
   letter-spacing: 0.2em;
   text-transform: uppercase;
   border-radius: 9999px;
-  transition: all 0.3s ease;
+  /* Nur noch der Rahmen wird hier animiert */
+  transition: border-color 0.3s ease; 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
   border: 1px solid $cyan-30;
   cursor: pointer;
+
+  /* Der stärkere Hover-Gradient liegt unsichtbar im Hintergrund */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, $cyan-60, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
 }
 
 .ctaButton:hover {
-  background: linear-gradient(to bottom right, $cyan-60, transparent);
-  border: 1px solid $cyan-60;  
-  
+  border-color: $cyan-60;  
+}
+
+.ctaButton:hover::before {
+  opacity: 1;
 }
 
 .buttonContent {
   position: relative;
-  z-index: 10;
+  z-index: 1;
   display: flex;
   align-items: center;
   gap: 0.5rem;
