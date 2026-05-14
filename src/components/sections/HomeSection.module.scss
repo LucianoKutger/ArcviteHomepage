@@ -79,15 +79,15 @@
 }
 
 .lpCtaWrapperBtn:hover {
-  background: linear-gradient(to bottom right, $cyan, transparent);
+  background: linear-gradient(to bottom right, $cyan-30, transparent);
 }
 
 .lpCtaInner {
   padding: 1.5rem 2.5rem;
   background: none;
-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
   border-radius: 1.5rem;
-  border: 1px solid $cyan-05;
+  border: 1px solid $cyan-10;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -99,6 +99,7 @@ backdrop-filter: blur(2px);
 
 .lpCtaWrapperBtn:hover .lpCtaInner {
   border-color: $cyan-30;
+
 }
 
 .lpHeroBtnText {
