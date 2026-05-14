@@ -85,7 +85,7 @@ const Navbar = () => {
               className={navBarStyles.lpHeaderAuditBtn}
           >
             <span className={navBarStyles.auditContent}>
-              Privates Audit sichern <ChevronRight className={navBarStyles.auditIcon} />
+              Audit sichern <ChevronRight className={navBarStyles.auditIcon} />
             </span>
           </button>
         </div>

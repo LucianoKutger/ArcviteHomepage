@@ -22,33 +22,28 @@ const VisionSection = () => {
             </p>
             <p className={styles.pText}>
               Doch während jede Kennzahl im Business akribisch optimiert wird, 
-              bleibt die wichtigste Komponente, die menschliche Biologie, 
+              bleibt die wichtigste <br/>Komponente, die menschliche Biologie, 
               oft dem Zufall überlassen.
             </p>
             <p>
               <strong className={styles.strongText}>Die Konsequenz?</strong>
-              <br/>
-              <strong className={styles.strongText}>&#10140; Ein unsichtbares Limit.</strong>
+              <strong className={styles.strongText}> &#10140; Ein unsichtbares Limit.</strong>
             </p>
             <p className={styles.pText}>
-              Trotz eiserner Disziplin wird der eigene Körper zum Flaschenhals für das nächste Wachstumslevel.&nbsp;
-              <span className={styles.cursivText}>Brain Fog</span>&nbsp;bei kritischen Entscheidungen, der unweigerliche<br/>
-              <span className={styles.cursivText}>Energie-Crash am Nachmittag</span>
-              &nbsp;und das schleichende Gefühl, dass der geschäftliche Erfolg mit der
-              &nbsp;<span className={styles.cursivText}>eigenen Substanz</span>&nbsp;bezahlt wird.
+              Trotz eiserner Disziplin wird der eigene Körper zum Flaschenhals für das nächste<br/>Wachstumslevel.
+              Brain Fog bei kritischen Entscheidungen, der unweigerliche<br/>
+              Energie-Crash am Nachmittag und das schleichende Gefühl, dass der geschäftliche<br/>Erfolg mit der
+              eigenen Substanz bezahlt wird.
             </p>
             <p>
               <strong className={styles.strongText}>Arcvite wurde gegründet, um diese Lücke zu schließen.</strong>
             </p>
             <p className={styles.pText}>
-              Wir verstehen Gesundheit nicht als Lifestyle-Attribut, sondern als Hochleistungs-Struktur. 
-              Basierend auf unserem proprietären Bogenmodell (dem Arc-System) bauen wir ein Fundament, das weit über herkömmliches Coaching hinausgeht.
+              Wir verstehen Gesundheit nicht als Lifestyle-Attribut, sondern als Hochleistungs-Struktur.<br/> 
+              Basierend auf unserem proprietären Bogenmodell (dem Arc-System) bauen wir<br/>ein Fundament, das weit über herkömmliches Coaching hinausgeht.
             </p>
             <p>
-              <strong className={styles.strongText}>Unser Ziel</strong>
-            </p>
-            <p className={styles.pText}>
-              Sie stehen nicht trotz, sondern wegen Ihrer physischen und mentalen Verfassung an der Spitze.
+              <strong className={styles.strongText}>Unser Ziel<br/><br/>Sie stehen nicht trotz, sondern wegen Ihrer physischen und<br/>mentalen Verfassung an der Spitze.</strong>
             </p>
           </div>
           

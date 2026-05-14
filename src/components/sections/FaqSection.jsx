@@ -34,7 +34,7 @@ const FaqSection = ({ scrollToSection }) => {
             className={styles.ctaButton}
           >
             <span className={styles.buttonContent}>
-              Jetzt Privates Audit sichern <ChevronRight className={styles.chevronIcon} />
+              Jetzt Audit sichern <ChevronRight className={styles.chevronIcon} />
             </span>
           </button>
         </div>

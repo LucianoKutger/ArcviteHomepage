@@ -8,6 +8,7 @@ import BioSyncSection from './components/sections/BioSyncSection';
 import ProtocolsSection from './components/sections/ProtocolsSection';
 import AuditSection from './components/sections/AuditSection';
 import FaqSection from './components/sections/FaqSection';
+import StudySection from './components/sections/StudySection'
 
 
 const Home = () => {
@@ -29,6 +30,9 @@ const Home = () => {
       <HomeSection scrollToSection={scrollToSection} />
       <VisionSection />
       <MethodologySection />
+      <section>
+        <StudySection />
+      </section>
       <FounderSection />
       <BioSyncSection />
       <ProtocolsSection scrollToSection={scrollToSection} />

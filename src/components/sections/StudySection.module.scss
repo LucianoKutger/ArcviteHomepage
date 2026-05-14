@@ -1,0 +1,124 @@
+@use "../../styles/variables" as *;
+
+
+.studyContainer {
+  background-color: $background;
+  position: relative; 
+  min-height: 100vh; 
+  width: 100%; /* Stellt sicher, dass es nicht breiter als der Viewport wird */
+  overflow: hidden; /* WICHTIG: Ersetzt 'overflow-x: hidden'. Verhindert doppelte Scrollbars! */
+  border-top: solid 1px $cyan-20;
+}
+
+/* Background Glow */
+.bgGlow {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba($cyan,0.03) 0%, $black 70%);
+  transform: translate(-50%, -50%);
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Layout & Typography */
+.studysSection {
+  position: relative;
+  z-index: 10;
+  padding: 6rem 1rem 3rem 1rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .studysSection {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* View Section Handling */
+.viewSection {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+
+  &.active {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.studysHeader {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.studysTitle {
+  font-size: 1.875rem;
+  line-height: 1.2;
+  font-weight: 700;
+  color: $text;
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .studysTitle {
+    font-size: 3rem;
+  }
+}
+
+/* Cards Container */
+.cardsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  position: relative;
+  z-index: 10;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .cardsContainer {
+    flex-direction: row;
+  }
+}
+
+/* Dividers */
+.cardDivider {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .cardDivider {
+    display: block;
+    width: 1px;
+    background: linear-gradient(to bottom, transparent, $cyan-40, transparent);
+    margin: 0 0.5rem;
+    flex-shrink: 0;
+  }
+}
+
+@media (min-width: 1024px) {
+  .cardDivider {
+    margin: 0 1rem;
+  }
+}
+
+/* Mobile Divider Fallback */
+.cardDividerMobile {
+  height: 1px;
+  width: 100%;
+  background: linear-gradient(to right, transparent, $cyan-40, transparent);
+  margin: 1.5rem 0;
+}
+
+@media (min-width: 768px) {
+  .cardDividerMobile {
+    display: none;
+  }
+}

@@ -1,4 +1,5 @@
 import styles from './SolutionCard.module.scss';
+import { AiOutlineExpandAlt } from "react-icons/ai";
 
 const SolutionCard = ({ item, onOpen, imgSrc }) => {
     return (
@@ -23,7 +24,7 @@ const SolutionCard = ({ item, onOpen, imgSrc }) => {
                    </div>
                    
                    <div className={styles.idWrapper}>
-                       <span className={styles.idText}>0{item.id}</span>
+                       <AiOutlineExpandAlt size="1.5rem" color="#2DD4BF"/>
                       
                    </div>
                </div>

@@ -34,7 +34,7 @@ const ProtocolsSection = ({ scrollToSection }) => {
 
             <div className={styles.bottomSection}>
               <p className={styles.quote}>
-                Wir ersetzen das Rätselraten durch ein technisches Protokoll mit klarer Erfolgsgarantie: Wir arbeiten so lange mit Ihnen, bis die vertraglich fixierten Performance-Marker Ziele erreicht sind - ohne Zusatzkosten.
+                <strong className={styles.strongP}>Klare Erfolgsgarantie</strong><br/>Wir arbeiten solange mit Ihnen<br/>bis die vertraglich fixierten Ziele erreicht sind<br/><strong className={styles.strongP}>ohne Zusatzkosten</strong>
               </p>
               
               <div className={styles.buttonWrapper}>
@@ -43,7 +43,7 @@ const ProtocolsSection = ({ scrollToSection }) => {
                   className={styles.ctaButton}
                 >
                   <span className={styles.buttonContent}>
-                    Jetzt Privates Audit sichern <ChevronRight className={styles.chevronIcon} />
+                    Jetzt Audit sichern <ChevronRight className={styles.chevronIcon} />
                   </span>
                 </button>
                 <p className={styles.disclaimer}>

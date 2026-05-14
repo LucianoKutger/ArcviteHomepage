@@ -71,7 +71,7 @@
 
 .quote {
   font-size: 1.5rem;
-  color: $cyan;
+  color: $text;
   font-weight: 300;
   line-height: 1.625;
   max-width: 56rem;
@@ -148,6 +148,11 @@
   font-weight: 300;
   font-style: italic;
   margin-top: 0.5rem;
+}
+
+.strongP{
+  color: $cyan;
+  font-weight: 500;
 }
 
 /* --- Media Queries --- */

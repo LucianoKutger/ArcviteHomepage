@@ -311,3 +311,38 @@ export const faqs = [
     }
   ];
 
+export const studiesData = [
+  {
+    id: 'study1',
+    tag: 'Platzhalter',
+    titlePre: 'DIE',
+    titleHighlight: 'RIBOSOMALE',
+    titlePost: 'UHR',
+    description: 'Im rDNA-Segment des Genoms identifiziert Arcvite die epigenetische Methylierung als den präzisesten Indikator für biologischen Verfall.',
+    quote: 'Wir messen die Geschwindigkeit des biologischen Zerfalls gegenüber der chronologischen Zeit.',
+    kpis: [
+      { id: 1, value: '9%-69%', labelLine1: 'Methylierungs-', labelLine2: 'Spektrum' },
+      { id: 2, value: '15%', labelLine1: 'Basale Minimal-', labelLine2: 'Methylierung' }
+    ]
+  },
+  {
+    id: 'study2',
+    tag: 'Kognition',
+    titlePre: 'DIE',
+    titleHighlight: 'NEURONALE',
+    titlePost: 'PLASTIZITÄT',
+    description: 'Durch die Analyse synaptischer Dichtemarker im Liquor cerebrospinalis quantifiziert Arcvite die kognitive Resilienz im fortschreitenden Alter.',
+    quote: 'Geistige Agilität ist kein Zufall, sondern das Resultat messbarer und beeinflussbarer zellulärer Netzwerke.',
+    kpis: null
+  },
+  {
+    id: 'study3',
+    tag: 'Metabolismus',
+    titlePre: 'DIE',
+    titleHighlight: 'ZELLULÄRE',
+    titlePost: 'ENERGIE',
+    description: 'Mitochondriale Effizienz bestimmt die zelluläre Vitalität. Wir messen die ATP-Produktionsraten als direkten Marker für metabolische Gesundheit.',
+    quote: 'Der fundamentale Treibstoff des Lebens liefert den Schlüssel zur Verlängerung der gesunden Lebensspanne.',
+    kpis: null
+  }
+];

@@ -38,7 +38,7 @@ const HomeSection = ({ scrollToSection }) => {
                 className={styles.lpCtaWrapperBtn}
               >
                 <div className={styles.lpCtaInner}>
-                  <span className={styles.lpHeroBtnText}>Privates Audit sichern</span>
+                  <span className={styles.lpHeroBtnText}>Audit sichern</span>
                   <div className={styles.lpCtaIconBox}>
                     <ArrowUpRight className="w-5 h-5" />
                   </div>
