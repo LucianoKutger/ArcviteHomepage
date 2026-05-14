@@ -54,8 +54,10 @@ const AuditSection = () => {
               </div>
 
               <button type="submit" className={styles.submitButton}>
-                Verfügbarkeit anfragen
-                <Send className={styles.sendIcon} />
+                <span className={styles.submitButtonContent}>
+                  Verfügbarkeit anfragen
+                  <Send className={styles.sendIcon} />
+                </span>
               </button>
 
               <p className={styles.disclaimer}>

@@ -73,16 +73,31 @@
   padding: 1px;
   background: none;
   border-radius: 1.5rem;
-  border: none;
+  border: none; 
   cursor: pointer;
-  transition: all 0.5s;
+  transition: all 0.3s ease;
+  overflow: hidden; 
+
+ 
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0; 
+    background: linear-gradient(to bottom right, $cyan-30, transparent);
+    opacity: 0; 
+    transition: opacity 0.3s ease; 
+    z-index: 0;
+  }
 }
 
-.lpCtaWrapperBtn:hover {
-  background: linear-gradient(to bottom right, $cyan-30, transparent);
+.lpCtaWrapperBtn:hover::before {
+  opacity: 1;
 }
 
 .lpCtaInner {
+position: relative;
+  z-index: 1;
+
   padding: 1.5rem 2.5rem;
   background: none;
   backdrop-filter: blur(2px);
@@ -94,13 +109,11 @@
   gap: 1.5rem;
   color: $text;
   transition: border-color 0.3s;
-  box-shadow: 0 25px 50px -12px $black-25
+  box-shadow: 0 25px 50px -12px $black-25;
+  
+  
 }
 
-.lpCtaWrapperBtn:hover .lpCtaInner {
-  border-color: $cyan-30;
-
-}
 
 .lpHeroBtnText {
   color: white;
@@ -124,6 +137,7 @@
 
 .lpCtaWrapperBtn:hover .lpCtaIconBox {
   transform: scale(1.05);
+  border-color: $cyan-30;
 }
 
 .lpCapacityNote {

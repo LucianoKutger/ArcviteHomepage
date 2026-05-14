@@ -118,6 +118,8 @@
 }
 
 .submitButton {
+  position: relative;
+  overflow: hidden; /* Hält den neuen Gradienten innerhalb der abgerundeten Ecken */
   width: 100%;
   background: linear-gradient(to bottom right, $cyan-50, transparent);
   color: $headlines;
@@ -127,18 +129,37 @@
   padding: 1rem 0;
   border-radius: 9999px;
   margin-top: 2rem;
-  transition: all 0.3s ease;
+  border: 1px solid $cyan-50;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+
+  /* Der stärkere Hover-Gradient liegt unsichtbar darüber */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, $cyan-70, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease; /* Die weiche Animation */
+    z-index: 0;
+  }
+}
+
+.submitButton:hover {
+  border-color: $cyan-70;
+}
+
+.submitButton:hover::before {
+  opacity: 1;
+}
+
+.submitButtonContent {
+  position: relative;
+  z-index: 1; 
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.75rem;
-  border: 1px solid $cyan-50;
-  cursor: pointer;
-}
-
-.submitButton:hover {
-  background: linear-gradient(to bottom right, $cyan-70, transparent);
-  border: 1px solid $cyan-70;
 }
 
 .sendIcon {

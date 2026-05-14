@@ -53,7 +53,9 @@
 }
 
 .lpHeaderAuditBtn {
-  display: none;
+  display: none; /* Wird durch Media Query weiter unten auf flex gesetzt, das passt! */
+  position: relative; /* WICHTIG für das ::before Element */
+  overflow: hidden;
   background: linear-gradient(to bottom right, $cyan-30, transparent);
   border: 1px solid $cyan-30;
   color: $headlines;
@@ -64,16 +66,28 @@
   letter-spacing: 0.1em;
   font-weight: 500;
   cursor: pointer;
-  transition: all 0.2s;
+  transition: border-color 0.3s ease; /* Nur der Rahmen wird hier animiert */
   align-items: center;
   gap: 0.5rem;
-  overflow: hidden;
+
+  /* Unser unsichtbarer Hover-Gradient */
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom right, $cyan-60, transparent);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+  }
 }
 
 .lpHeaderAuditBtn:hover {
-  background: linear-gradient(to bottom right, $cyan-60, transparent);
-  border: 1px solid $cyan-60;
-  
+  border-color: $cyan-60;
+}
+
+.lpHeaderAuditBtn:hover::before {
+  opacity: 1;
 }
 
 .lpNavActions {
