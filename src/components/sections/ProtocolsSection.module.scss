@@ -88,9 +88,9 @@
 
 .ctaButton {
   padding: 1rem 2.5rem;
-  background: linear-gradient(to bottom right, $cyan-30, transparent);
+  background: linear-gradient(to bottom right, $cyan-50, transparent);
   color: $headlines;
-  border: 1px solid $cyan-30;
+  border: 1px solid $cyan-50;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
@@ -104,8 +104,8 @@
 }
 
 .ctaButton:hover {
-  background: linear-gradient(to bottom right, $cyan-60, transparent);
-  border: 1px solid $cyan-60;
+  background: linear-gradient(to bottom right, $cyan-70, transparent);
+  border: 1px solid $cyan-70;
 }
 
 .buttonContent {
