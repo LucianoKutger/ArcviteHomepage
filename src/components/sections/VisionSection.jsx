@@ -49,9 +49,9 @@ const VisionSection = () => {
           
           <div className={styles.featuresGrid}>
             {[
-              { title: "Lifespan", desc: "Verlängerung der gesundheitlichen Spannweite durch präventive Medizin.", icon: <Infinity className="w-5 h-5 text-[#2DD4BF]" /> },
-              { title: "Resilience", desc: "Aufbau eines Immunsystems, das unter hohem Druck nicht einknickt.", icon: <Shield className="w-5 h-5 text-[#2DD4BF]" /> },
-              { title: "Clarity", desc: "Dauerhafter kognitives Fokus - ohne Abhängigkeit von Stimulanzien.", icon: <Brain className="w-5 h-5 text-[#2DD4BF]" /> },
+              { title: "Lifespan", desc: "Verlängerung der gesundheitlichen Spannweite durch präventive Medizin.", icon: <Infinity className={styles.featureIcon} /> },
+              { title: "Resilience", desc: "Aufbau eines Immunsystems, das unter hohem Druck nicht einknickt.", icon: <Shield className={styles.featureIcon} /> },
+              { title: "Clarity", desc: "Dauerhafter kognitives Fokus - ohne Abhängigkeit von Stimulanzien.", icon: <Brain className={styles.featureIcon} /> },
             ].map((item, i) => (
               <div key={i} className={styles.featureItem}>
                 <div className={styles.iconWrapper}>

@@ -3,7 +3,7 @@
 .lpHeroSection {
   position: relative;
   z-index: 10;
-  min-height: 100vh;
+  min-height: $layout-min-height-screen;
   display: flex;
   align-items: center;
   overflow: hidden;
@@ -14,16 +14,20 @@
   position: relative;
   z-index: 10;
   width: 100%;
-  max-width: 80rem;
+  max-width: $container-max-width;
   margin: 0 auto;
-  padding: 8rem 1.5rem;
+  padding: $spacing-6xl $spacing-lg;
 }
 
 .lpHeroGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: $spacing-xl;
   align-items: center;
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: 80% 20%;
+  }
 }
 
 .lpHeroTextCol {
@@ -34,51 +38,63 @@
 }
 
 .lpHeroH1 {
-  font-weight: 600;
-  margin-bottom: 2rem;
-  line-height: 1.1;
-  letter-spacing: -0.025em;
+  font-weight: $font-weight-semibold;
+  margin-bottom: $spacing-xl;
+  line-height: $line-height-tight;
+  letter-spacing: $letter-spacing-tight;
 }
 
 .heroGradientText {
   display: block;
-  font-size: 3rem;
-  line-height: 1;
+  font-size: $font-size-3xl;
+  line-height: $line-height-none;
   color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
-  background-image: linear-gradient(to bottom right, $greenMint, $cyan, $skyblue );
+  background-image: linear-gradient(to bottom right, $green-mint, $cyan, $skyblue);
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-4xl;
+  }
+
+  @media (min-width: $breakpoint-xl) {
+    font-size: $font-size-5xl;
+  }
 }
 
 .lpHeroP {
-  font-size: 1.25rem;
+  font-size: $font-size-ml;
   color: $text;
-  max-width: 64rem;
-  margin-bottom: 3rem;
-  font-weight: 300;
-  line-height: 1.6;
-  
+  max-width: $container-md-width;
+  margin-bottom: $spacing-xxl;
+  font-weight: $font-weight-light;
+  line-height: $line-height-loose;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-lg;
+  }
 }
 
 .lpHeroCtaCol {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
-  padding-bottom: 1.5rem;
+  gap: $spacing-sm;
+  padding-bottom: $spacing-lg;
+
+  @media (min-width: $breakpoint-lg) {
+    align-items: flex-end;
+  }
 }
 
 .lpCtaWrapperBtn {
   position: relative;
-  padding: 1px;
+  padding: $border-width-base;
   background: none;
-  border-radius: 1.5rem;
+  border-radius: $radius-lg;
   border: none; 
   cursor: pointer;
-
   overflow: hidden; 
-  
-
   transform: translateZ(0);
   backface-visibility: hidden;
 
@@ -88,97 +104,72 @@
     inset: 0; 
     background: linear-gradient(to bottom right, $cyan-30, transparent);
     opacity: 0; 
-    transition: opacity 0.3s ease; 
+    transition: opacity $transition-base; 
     z-index: 0;
-    
-    /* Optimiert die Opacity-Animation */
     will-change: opacity;
     transform: translateZ(0);
   }
-}
 
-.lpCtaWrapperBtn:hover::before {
-  opacity: 1;
+  &:hover {
+    &::before {
+      opacity: 1;
+    }
+
+    .lpCtaIconBox {
+      transform: scale(1.05);
+      border-color: $cyan-30;
+    }
+  }
 }
 
 .lpCtaInner {
   position: relative;
   z-index: 1;
-  padding: 1.5rem 2.5rem;
+  padding: $spacing-lg $spacing-2xl;
   background: none;
-  backdrop-filter: blur(2px);
-  -webkit-backdrop-filter: blur(2px);
-  border-radius: 1.5rem;
-  border: 1px solid $cyan-10;
+  backdrop-filter: blur($blur-sm);
+  -webkit-backdrop-filter: blur($blur-sm);
+  border-radius: $radius-lg;
+  border: $border-width-base solid $cyan-10;
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
+  gap: $spacing-lg;
   color: $text;
-  transition: border-color 0.3s;
-  box-shadow: 0 25px 50px -12px $black-25;
+  transition: border-color $transition-base;
+  box-shadow: $shadow-card;
   transform: translateZ(0);
 }
 
 .lpHeroBtnText {
-  color: white;
-  font-weight: 500;
-  font-size: 1.125rem;
-  letter-spacing: -0.025em;
+  color: $white;
+  font-weight: $font-weight-medium;
+  font-size: $font-size-md;
+  letter-spacing: $letter-spacing-tight;
   white-space: nowrap;
 }
 
 .lpCtaIconBox {
-  width: 2.5rem;
-  height: 2.5rem;
+  width: $spacing-2xl;
+  height: $spacing-2xl;
   background-color: $accent;
-  border-radius: 0.75rem;
+  border-radius: $radius-md;
   color: $black;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s;
-}
-
-.lpCtaWrapperBtn:hover .lpCtaIconBox {
-  transform: scale(1.05);
-  border-color: $cyan-30;
+  transition: transform $transition-base;
 }
 
 .lpCapacityNote {
-  font-size: 10px;
+  font-size: $font-size-xxs;
   color: $white-40;
   font-style: italic;
-  max-width: 280px;
+  max-width: $container-xxs-width;
   text-align: center;
-  line-height: 1.25;
-}
+  line-height: $line-height-snug;
 
-/* --- Media Queries --- */
-
-@media (min-width: 768px) {
-  .heroGradientText {
-    font-size: 3.75rem;
-  }
-  .lpHeroP {
-    font-size: 1.5rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .lpHeroGrid {
-    grid-template-columns: 80% 20%;
-  }
-  .lpHeroCtaCol {
-    align-items: flex-end;
-  }
-  .lpCapacityNote {
+  @media (min-width: $breakpoint-lg) {
     text-align: right;
-  }
-}
-
-@media (min-width: 1280px) {
-  .heroGradientText {
-    font-size: 4.5rem;
   }
 }

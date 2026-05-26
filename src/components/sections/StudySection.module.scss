@@ -1,26 +1,16 @@
 @use "../../styles/variables" as *;
 
-
 .studyContainer {
+  position: relative;
+  width: 100%; 
+  min-height: $layout-min-height-screen;
   background-color: $background;
-  position: relative; 
-  min-height: 100vh; 
-  width: 100%; /* Stellt sicher, dass es nicht breiter als der Viewport wird */
-  overflow: hidden; /* WICHTIG: Ersetzt 'overflow-x: hidden'. Verhindert doppelte Scrollbars! */
-  border-top: solid 1px $cyan-20;
-}
-
-/* Background Glow */
-.bgGlow {
-  position: absolute;
-  top: 20%;
-  left: 50%;
-  width: 60vw;
-  height: 60vw;
-  background: radial-gradient(circle, rgba($cyan,0.03) 0%, $black 70%);
-  transform: translate(-50%, -50%);
-  z-index: 0;
-  pointer-events: none;
+  border-top: solid $border-width-base $cyan-20;
+  
+  /* overflow-x: hidden;
+      overflow-y: visible; */
+  
+  
 }
 
 /* Layout & Typography */
@@ -44,7 +34,7 @@
 .viewSection {
   display: none;
   opacity: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity $transition-slow;
 
   &.active {
     display: block;
@@ -53,22 +43,20 @@
 }
 
 .studysHeader {
-  margin-bottom: 4rem;
+  margin-bottom: $spacing-3xl;
   text-align: center;
 }
 
 .studysTitle {
-  font-size: 1.875rem;
-  line-height: 1.2;
-  font-weight: 700;
-  color: $text;
-  max-width: 48rem;
+  max-width: $layout-max-width-title;
   margin: 0 auto;
-}
+  color: $text;
+  font-size: $font-size-xl;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-heading;
 
-@media (min-width: 768px) {
-  .studysTitle {
-    font-size: 3rem;
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
   }
 }
 
@@ -80,10 +68,8 @@
   position: relative;
   z-index: 10;
   margin: 0 auto;
-}
 
-@media (min-width: 768px) {
-  .cardsContainer {
+  @media (min-width: $breakpoint-md) {
     flex-direction: row;
   }
 }
@@ -91,34 +77,28 @@
 /* Dividers */
 .cardDivider {
   display: none;
-}
 
-@media (min-width: 768px) {
-  .cardDivider {
+  @media (min-width: $breakpoint-md) {
     display: block;
-    width: 1px;
-    background: linear-gradient(to bottom, transparent, $cyan-40, transparent);
-    margin: 0 0.5rem;
     flex-shrink: 0;
+    width: 1px;
+    margin: 0 $spacing-xs;
+    background: linear-gradient(to bottom, transparent, $cyan-40, transparent);
   }
-}
 
-@media (min-width: 1024px) {
-  .cardDivider {
-    margin: 0 1rem;
+  @media (min-width: $breakpoint-lg) {
+    margin: 0 $spacing-md;
   }
 }
 
 /* Mobile Divider Fallback */
 .cardDividerMobile {
-  height: 1px;
   width: 100%;
+  height: 1px;
+  margin: $spacing-lg 0;
   background: linear-gradient(to right, transparent, $cyan-40, transparent);
-  margin: 1.5rem 0;
-}
 
-@media (min-width: 768px) {
-  .cardDividerMobile {
+  @media (min-width: $breakpoint-md) {
     display: none;
   }
 }

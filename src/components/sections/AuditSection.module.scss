@@ -4,7 +4,7 @@
 .footer {
   position: relative;
   z-index: 10;
-  padding: 5rem 0;
+  padding: $spacing-4xl 0;
   border-top: 1px solid $white-10;
   background-color: $background;
 }
@@ -12,39 +12,42 @@
 .container {
   max-width: 80rem;
   margin: 0 auto;
-  padding: 0 1.5rem;
+  padding: 0 $spacing-lg;
 }
 
 .auditCard {
-  border-radius: 1.5rem;
+  border-radius: $radius-lg;
   background-color: $background;
   border: 1px solid $white-10;
-  padding: 2rem;
+  padding: $spacing-xl;
   max-width: 48rem;
   margin: 0 auto;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px $black-25;
+  box-shadow: $shadow-card;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-3xl;
+  }
 }
 
 .header {
   text-align: center;
-  margin-bottom: 4rem;
+  margin-bottom: $spacing-3xl;
   position: relative;
   z-index: 10;
 }
 
 .title {
-  font-size: 1.5rem;
+  font-size: $font-size-lg;
   letter-spacing: 0.3em;
   text-transform: uppercase;
   color: $headlines;
-  margin-bottom: 0.75rem;
-}
+  margin-bottom: $spacing-sm;
 
-.titleLight {
-  font-weight: 300;
-  opacity: 0.6;
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-2xl;
+  }
 }
 
 .titleBold {
@@ -54,7 +57,7 @@
 .form {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: $spacing-2xl;
   position: relative;
   z-index: 10;
   max-width: 42rem;
@@ -64,93 +67,101 @@
 .inputGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
+  gap: $spacing-2xl;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
 .goalsSection {
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: $spacing-md;
 }
 
 .goalsLabel {
-  font-size: 0.75rem;
-  color: $white-40;;
+  font-size: $font-size-xs;
+  color: $white-40;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   display: block;
-  margin-bottom: 0.5rem;
+  margin-bottom: $spacing-xs;
 }
 
 .goalsContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
+  gap: $spacing-sm;
 }
 
 .goalButton {
-  padding: 0.5rem 1rem;
-  font-size: 0.875rem;
-  border-radius: 9999px;
+  padding: $spacing-xs $spacing-md;
+  font-size: $font-size-sm;
+  border-radius: $radius-full;
   border: 1px solid;
-  transition: all 300ms ease;
+  transition: all $transition-base;
   cursor: pointer;
-}
 
-.goalActive {
-  background-color: $cyan;
-  border-color: $cyan;
-  color: $black;
-  font-weight: 500;
-  box-shadow: 0 0 15px $white-30;
-}
+  &.active {
+    background-color: $cyan;
+    border-color: $cyan;
+    color: $black;
+    font-weight: 500;
+    box-shadow: $shadow-glow;
+  }
 
-.goalInactive {
-  background-color: transparent;
-  border-color: $white-10;;
-  color: $white-60;;
-}
+  &.inactive {
+    background-color: transparent;
+    border-color: $white-10;
+    color: $white-60;
 
-.goalInactive:hover {
-  border-color: $cyan-40;
-  box-shadow: 0 0 30px $cyan-20;;
-  color: $text;
+    &:hover {
+      border-color: $cyan-40;
+      box-shadow: $shadow-glow-cyan;
+      color: $text;
+    }
+  }
 }
 
 .submitButton {
   position: relative;
-  overflow: hidden; /* Hält den neuen Gradienten innerhalb der abgerundeten Ecken */
+  overflow: hidden;
   width: 100%;
   background: linear-gradient(to bottom right, $cyan-50, transparent);
   color: $headlines;
   font-weight: 700;
   letter-spacing: 0.2em;
   text-transform: uppercase;
-  padding: 1rem 0;
-  border-radius: 9999px;
-  margin-top: 2rem;
+  padding: $spacing-md 0;
+  border-radius: $radius-full;
+  margin-top: $spacing-xl;
   border: 1px solid $cyan-50;
   cursor: pointer;
-  transition: border-color 0.3s ease;
+  transition: border-color $transition-base;
 
-  /* Der stärkere Hover-Gradient liegt unsichtbar darüber */
+  /* Invisible hover gradient overlaid */
   &::before {
     content: "";
     position: absolute;
     inset: 0;
     background: linear-gradient(to bottom right, $cyan-70, transparent);
     opacity: 0;
-    transition: opacity 0.3s ease; /* Die weiche Animation */
+    transition: opacity $transition-base; 
     z-index: 0;
   }
-}
 
-.submitButton:hover {
-  border-color: $cyan-70;
-}
+  &:hover {
+    border-color: $cyan-70;
 
-.submitButton:hover::before {
-  opacity: 1;
+    &::before {
+      opacity: 1;
+    }
+
+    .sendIcon {
+      transform: translate(0.25rem, -0.25rem);
+    }
+  }
 }
 
 .submitButtonContent {
@@ -159,46 +170,27 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: $spacing-sm;
 }
 
 .sendIcon {
   width: 1rem;
   height: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.submitButton:hover .sendIcon {
-  transform: translate(0.25rem, -0.25rem);
+  transition: transform $transition-base;
 }
 
 .disclaimer {
   text-align: center;
-  font-size: 10px;
-  color: $white-30;;
-  margin-top: 1.5rem;
+  font-size: $font-size-xxs;
+  color: $white-30;
+  margin-top: $spacing-lg;
   font-weight: 300;
   font-style: italic;
   max-width: 32rem;
-  margin: 1.5rem auto 0;
+  margin: $spacing-lg auto 0;
   line-height: 1.625;
-}
 
-/* Tablet & Desktop Optimierungen (zusammengefasst) */
-@media (min-width: 768px) {
-  .auditCard {
-    padding: 4rem;
-  }
-
-  .title {
-    font-size: 2.25rem;
-  }
-
-  .inputGrid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .disclaimer {
-    font-size: 0.75rem;
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-xs;
   }
 }

@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 
 import FAQItem from '../cards/Faq';
-import ArcviteLogoPic from '../../assets/ArcviteLogoPic.png'; // Pfad angepasst
+import ArcviteLogoPic from '../../assets/ArcviteLogoPic.png';
 import { faqs } from '../../data/content'; 
 import styles from './FaqSection.module.scss';
 
@@ -46,15 +46,12 @@ const FaqSection = ({ scrollToSection }) => {
               </div>
             </div>
             <div className={styles.linksContainer}>
-
               <a href="/impressum" className={styles.footerLink}>Impressum</a>
               <a href="/datenschutz" className={styles.footerLink}>Datenschutz</a>
             </div>
-            <div className={styles.copyrightContainer}>
+            {/* Unnecessary copyrightContainer div removed for a flatter DOM */}
             <p className={styles.copyright}>© 2026 Arcvite</p>
-
-            </div>
-          </div>
+        </div>
     </footer>
   );
 };

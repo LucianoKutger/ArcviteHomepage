@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Send } from 'lucide-react';
 import FadeOutSection from '../visuals/FadeoutSection';
 import FormInput from '../ui/FormInput';
-import { goalOptions } from '../../data/content'; // Pfad angepasst
+import { goalOptions } from '../../data/content';
 import styles from './AuditSection.module.scss';
 
 const AuditSection = () => {
@@ -45,7 +45,8 @@ const AuditSection = () => {
                       key={goal.value}
                       type="button"
                       onClick={() => toggleGoal(goal.value)}
-                      className={`${styles.goalButton} ${selectedGoals.includes(goal.value) ? styles.goalActive : styles.goalInactive}`}
+                      // Updated class structure mapping directly to nested states
+                      className={`${styles.goalButton} ${selectedGoals.includes(goal.value) ? styles.active : styles.inactive}`}
                     >
                       {goal.label}
                     </button>
@@ -66,8 +67,6 @@ const AuditSection = () => {
             </form>
           </div>
         </div>
-
-
     </FadeOutSection>
   );
 };

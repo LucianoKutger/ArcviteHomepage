@@ -3,44 +3,52 @@
 .section {
   position: relative;
   z-index: 10;
-  padding: 8rem 1.5rem;
+  padding: $spacing-6xl $spacing-lg;
   background-color: $background;
-  border-top: 1px solid $cyan-05;
+  border-top: $border-width-base solid $cyan-05;
 }
 
-
 .container {
-  max-width: 80rem;
+  max-width: $container-max-width;
   margin: 0 auto;
 }
 
 .headerContainer {
-  margin-bottom: 5rem;
+  margin-bottom: $spacing-4xl;
 }
 
 .title {
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 600;
-  letter-spacing: -0.025em;
-  margin-bottom: 1rem;
+  font-size: $font-size-xl;
+  line-height: $line-height-lg;
+  font-weight: $font-weight-semibold;
+  letter-spacing: $letter-spacing-tight;
+  margin-bottom: $spacing-md;
   color: $headlines;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-3xl;
+    line-height: $line-height-none;
+  }
 }
 
 .subtitle {
   color: $text;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  max-width: 42rem;
+  font-size: $font-size-md;
+  line-height: $line-height-base;
+  max-width: $layout-max-width-subtitle;
 }
 
 .contentBox {
   position: relative;
   overflow: hidden;
-  border-radius: 1.5rem;
-  border: 1px solid $cyan-10;
+  border-radius: $radius-lg;
+  border: $border-width-base solid $cyan-10;
   background-color: $black;
-  padding: 2rem;
+  padding: $spacing-xl;
+
+  @media (min-width: $breakpoint-md) {
+    padding: $spacing-xxl;
+  }
 }
 
 .gradientBackground {
@@ -54,56 +62,72 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2rem;
+  gap: $spacing-xl;
   position: relative;
   z-index: 10;
+
+  @media (min-width: $breakpoint-md) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: $breakpoint-lg) {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 .bottomSection {
   position: relative;
   z-index: 10;
-  margin-top: 2rem;
-  padding-top: 4rem;
+  margin-top: $spacing-xl;
+  padding-top: $spacing-3xl;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .quote {
-  font-size: 1.5rem;
+  font-size: $font-size-lg;
   color: $text;
-  font-weight: 300;
-  line-height: 1.625;
-  max-width: 56rem;
-  margin: 0 auto 3rem;
+  font-weight: $font-weight-light;
+  line-height: $line-height-relaxed;
+  max-width: $layout-max-width-quote;
+  margin: 0 auto $spacing-xxl;
   text-align: center;
+
+  @media (min-width: $breakpoint-md) {
+    font-size: $font-size-xl;
+  }
+}
+
+.strongP {
+  color: $cyan;
+  font-weight: $font-weight-medium;
 }
 
 .buttonWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 0.75rem;
+  gap: $spacing-sm;
 }
 
 .ctaButton {
   position: relative;
   overflow: hidden; 
-  padding: 1rem 2.5rem;
+  padding: $spacing-md $spacing-2xl;
   background: linear-gradient(to bottom right, $cyan-50, transparent);
   color: $headlines;
-  border: 1px solid $cyan-50;
-  font-weight: 700;
-  letter-spacing: 0.2em;
+  border: $border-width-base solid $cyan-50;
+  font-weight: $font-weight-bold;
+  letter-spacing: $letter-spacing-widest;
   text-transform: uppercase;
-  border-radius: 9999px;
-  transition: border-color 0.3s ease; 
+  border-radius: $radius-full;
+  transition: border-color $transition-base; 
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 0.75rem;
+  gap: $spacing-sm;
   cursor: pointer;
-
 
   &::before {
     content: "";
@@ -111,17 +135,21 @@
     inset: 0;
     background: linear-gradient(to bottom right, $cyan-70, transparent);
     opacity: 0;
-    transition: opacity 0.3s ease; /* Die weiche Animation */
+    transition: opacity $transition-base;
     z-index: 0;
   }
-}
 
-.ctaButton:hover {
-  border-color: $cyan-70;
-}
+  &:hover {
+    border-color: $cyan-70;
 
-.ctaButton:hover::before {
-  opacity: 1;
+    &::before {
+      opacity: 1;
+    }
+
+    .chevronIcon {
+      transform: translateX($spacing-xxs);
+    }
+  }
 }
 
 .buttonContent {
@@ -129,55 +157,19 @@
   z-index: 1;
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: $spacing-xs;
 }
 
 .chevronIcon {
-  width: 1rem;
-  height: 1rem;
-  transition: transform 0.3s ease;
-}
-
-.ctaButton:hover .chevronIcon {
-  transform: translateX(0.25rem);
+  width: $spacing-md;
+  height: $spacing-md;
+  transition: transform $transition-base;
 }
 
 .disclaimer {
-  font-size: 10px;
+  font-size: $font-size-xxs;
   color: $white-30;
-  font-weight: 300;
+  font-weight: $font-weight-light;
   font-style: italic;
-  margin-top: 0.5rem;
-}
-
-.strongP{
-  color: $cyan;
-  font-weight: 500;
-}
-
-/* --- Media Queries --- */
-
-@media (min-width: 768px) {
-  .title {
-    font-size: 3rem;
-    line-height: 1;
-  }
-
-  .contentBox {
-    padding: 3rem;
-  }
-
-  .grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .quote {
-    font-size: 1.875rem;
-  }
-}
-
-@media (min-width: 1024px) {
-  .grid {
-    grid-template-columns: repeat(3, 1fr);
-  }
+  margin-top: $spacing-xs;
 }

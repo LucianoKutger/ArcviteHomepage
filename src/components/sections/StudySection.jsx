@@ -1,6 +1,7 @@
 import React from 'react';
 import StudyCard from '../cards/StudyCard';
 import FadeOutSection from '../visuals/FadeoutSection';
+import BackgroundGlow from '../visuals/BackgroundGlow';
 import styles from './StudySection.module.scss';
 
 import { studiesData } from "../../data/content";
@@ -13,11 +14,11 @@ const StudySection = () => {
 
   return (
     <FadeOutSection id="studies" className={styles.studyContainer}>
-      {/* Background Glow */}
-      <div className={styles.bgGlow}></div>
+      {/* Das prop className="glow" garantiert die fehlerfreie Zuordnung in der FadeOutSection */}
+            
+      <BackgroundGlow className="glow" />
 
       <main className={styles.studysSection}>
-        {/* Die View-Section nutzt hier Template-Literals für mehrere Modul-Klassen */}
         <section id="view-overview" className={`${styles.viewSection} ${styles.active}`}>
           
           {/* Header Section */}

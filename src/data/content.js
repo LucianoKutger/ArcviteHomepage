@@ -346,3 +346,58 @@ export const studiesData = [
     kpis: null
   }
 ];
+
+
+export const methodologySegments = [
+  { 
+      id: 1, 
+      title: "Core Effects", 
+      subtitle: "The DNA of Performance", 
+      hex: "#2563EB", 
+      radius: 180, 
+      thickness: 6, 
+      description: "Die psychologische Architektur deines Erfolgs. Dieser Kern arbeitet durch unsere Algorithmen vollautomatisch im Hintergrund.", 
+      listItems: [
+        { label: "Regenerations Zyklus", text: "Das aktive Management von Schlafphasen, zirkadianer Rhythmik und Erholungsprotokollen. Er ist der entscheidende Taktgeber für Ihren neuronalen Reset und die Grundvoraussetzung für kognitive Präzision sowie die Kontrolle Ihrer Emotionen." }, 
+        { label: "Nährstoff-Basis", text: "Der Treibstoff für Ihren Tag. Sie entscheidet darüber, ob Ihre Energie bis zum Abend reicht oder ob Ihr Fokus vorzeitig einbricht. Ohne die richtige Basis riskieren Sie unnötigen Leistungsabfall." }
+      ] 
+    },
+    { 
+      id: 2, 
+      title: "Neuro-Biochemistry", 
+      subtitle: "Systemic Performance Base", 
+      hex: "#0EA5E9", 
+      radius: 300, 
+      thickness: 6, 
+      description: "Die biochemische Architektur Ihres Körpers. Faktoren der internen Leistungsfähigkeit, die wir mit moderner Wissenschaft messbar optimieren können.", 
+      listItems: [
+        { label: "Hormonhaushalt", text: "Die Balance zwischen Stressadaption und Regeneration definiert Ihre emotionale Stabilität und physische Präsenz unter Druck." }, 
+        { label: "Neurotransmitter", text: "Die Qualität Ihrer kognitiven Signale. Diese Botenstoffe steuern Ihre Fokuskapazität, analytische Schärfe und Impulskontrolle in Verhandlungssituationen." },
+        { label: "Entzündungen", text: 'Der Wächter Ihrer biologischen Kapazität. Die Kontrolle systemischer Reaktionen eliminiert kognitive Bremsen wie "Brain Fog" und sichert Ihre Energieproduktion gegen vorzeitigen Verschleiß.' }
+      ] 
+    },
+    { 
+      id: 3, 
+      title: "Operational Sphere", 
+      subtitle: "Executive Ecosystem", 
+      hex: "#2DD4BF", 
+      radius: 420, 
+      thickness: 6, 
+      description: "Die makroskopische Perspektive. Die äußeren Kräfte und systemischen Variablen, die permanent auf Ihre Biologie und Psychologie einwirken. Ihr System muss diese Faktoren nicht nur aushalten, sondern verarbeiten.", 
+      listItems: [
+        { label: "Unberechenbare Ereignisse", text: "Globale Krisen, Black-Swan-Events und plötzliche Situationen, die sich nicht im Vorfeld planen lassen und von Ihnen eine sofortige Adaption fordern." }, 
+        { label: "Asymmetrisches Umfeld", text: "Ein von chronischem Druck geprägtes Ökosystem. Deadlines, Globale Mobilität und das kontinuierliche Management unternehmerischer Risiken." },
+        { label: "Hochdruck Szenarien", text: "Verhandlungssituationen, in denen emotionale Kontrolle, kognitive Präzision und die richtige Herangehensweise über Erfolg oder Scheitern entscheiden. Momente, in denen unkontrollierte Emotionsschwankungen Ihr Urteilsvermögen direkt bedrohen." }
+      ] 
+    },
+    { 
+      id: 4, 
+      title: "Dream", 
+      subtitle: "Your Ultimate Vision", 
+      hex: "#5EEAD4", 
+      radius: 540, 
+      thickness: 6, 
+      description: "Ihr Polarstern. Im Bogenmodell ist der Traum die oberste Instanz, nach der wir alles ausrichten. Er definiert die Leitplanken für Ihre Strategic Vision, Ihre Neuro-Biochemistry und Ihre Core Effects. Alles folgt dem Ziel.",
+      listItems: null
+    }
+];

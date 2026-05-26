@@ -16,7 +16,7 @@ const FounderSection = () => {
 
             <h2 className={styles.heading}>
               "IF YOU THINK BIG,<br />
-              <span className={styles.headingFaded}>TRY THINKING BIGGER."</span>
+              <span className={styles.faded}>TRY THINKING BIGGER."</span>
             </h2>
 
             <div className={styles.description}>
@@ -34,7 +34,8 @@ const FounderSection = () => {
               </p>
             </div>
 
-            <div className={styles.quoteBlockLast}>
+            {/* Changed from quoteBlockLast to quoteBlock, leveraging SCSS :last-of-type */}
+            <div className={styles.quoteBlock}>
               <p className={styles.quoteText}>
                 "Arcvite ist die Architektur, die dort übernimmt, wo der menschliche Wille versagt."
               </p>
@@ -45,9 +46,7 @@ const FounderSection = () => {
 
           </div>
 
-          
           <div className={styles.imageContainer}>
-            
               <div className={styles.imagePattern} />
               
               <div className={styles.imagePlaceholderText}>
