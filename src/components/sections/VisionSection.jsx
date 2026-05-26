@@ -1,11 +1,13 @@
 import React from 'react';
 import { Infinity, Shield, Brain } from 'lucide-react';
 import FadeOutSection from '../visuals/FadeoutSection';
+import BackgroundGlow from '../visuals/BackgroundGlow';
 import styles from './VisionSection.module.scss';
 
 const VisionSection = () => {
   return (
     <FadeOutSection id="vision" className={styles.section}>
+      <BackgroundGlow className="glow" variant='vision' />
       
        <div className={styles.backgroundWrapper}>
           <div className={styles.glowEffect} />

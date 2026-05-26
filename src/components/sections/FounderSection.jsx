@@ -1,10 +1,12 @@
 import React from 'react';
 import FadeOutSection from '../visuals/FadeoutSection';
+import BackgroundGlow from '../visuals/BackgroundGlow';
 import styles from './FounderSection.module.scss';
 
 const FounderSection = () => {
   return (
     <FadeOutSection id="founder" className={styles.section}>
+      <BackgroundGlow className="glow" variant='founder' />
       
       <div className={styles.gridContainer}>
         

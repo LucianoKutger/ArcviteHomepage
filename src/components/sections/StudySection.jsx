@@ -16,7 +16,7 @@ const StudySection = () => {
     <FadeOutSection id="studies" className={styles.studyContainer}>
       {/* Das prop className="glow" garantiert die fehlerfreie Zuordnung in der FadeOutSection */}
             
-      <BackgroundGlow className="glow" />
+      <BackgroundGlow className="glow" variant='study' />
 
       <main className={styles.studysSection}>
         <section id="view-overview" className={`${styles.viewSection} ${styles.active}`}>
