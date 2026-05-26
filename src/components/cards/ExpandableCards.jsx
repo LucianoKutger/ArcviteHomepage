@@ -5,17 +5,17 @@ import styles from "./ExpandableCards.module.scss";
 const ExpandableCard = ({ 
   title, category, focusTitle, focusDesc, imageLabel, imageSrc, details, className = "", isOpen, onToggle, opacity, wide
 }) => {
-  const opacityVal = opacity ?? 1
+  const opacityVal = opacity ?? 1;
 
   return (
-    /* Der neue Wrapper hält die Stellung im CSS-Grid */
+    /* Der Wrapper hält die Stellung im CSS-Grid */
     <div className={`${styles.cardWrapper} ${wide ? styles.cardWide : ''} ${className}`}>
       <motion.div 
-        layout
-        layoutId={`card-${title}`}
         className={`${styles.card} ${isOpen ? styles.cardOpen : ''}`}
         onClick={onToggle}
+        /* Direkte CSS-Height Animation statt unzuverlässigem Layout-Tracking */
         animate={{
+          height: isOpen ? "auto" : "100%",
           zIndex: isOpen ? 50 : 10
         }}
         transition={{
