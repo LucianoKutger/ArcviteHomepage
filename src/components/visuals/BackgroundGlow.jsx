@@ -1,14 +1,16 @@
 import React from 'react';
 import styles from './BackgroundGlow.module.scss';
 
-export default function BackgroundGlow({ className = "" }) {
+export default function BackgroundGlow({ className = "", variant = "study" }) {
+
+  const variantClass = styles[variant] || styles.study;
+
   return (
-    /* Der Wrapper nutzt nun clip-path, um Seiteneffekte im Layout komplett zu verhindern */
-    <div className={`${styles.backgroundGlowLayer} ${className}`}>
-      {/* Subtiler Hintergrund-Glow */}
+    <div className={`${styles.backgroundGlowLayer} ${variantClass} ${className}`}>
+  
       <div className={styles.bgGlow}></div>
       
-      {/* Animierte Ambient Orbs */}
+      {/* Animierte Ambient Orbs (Positionen werden durch die Variante gesteuert) */}
       <div className={`${styles.ambientOrb} ${styles.orb1}`}></div>
       <div className={`${styles.ambientOrb} ${styles.orb2}`}></div>
       <div className={`${styles.ambientOrb} ${styles.orb3}`}></div>
