@@ -22,16 +22,18 @@
 }
 
 .visualWrapper {
-  max-width: 600px;
+  width: 100%;
+  max-width: 550px;       
   position: sticky;
-  flex: 1;
   top: 10rem;
   align-self: flex-start;
+  flex: 0 0 auto;         
+  flex-shrink: 0;         
 }
 
 .svgGraph {
-  max-width: 600px;
-  max-height: 600px;
+  width: 100%;           
+  height: auto;
   overflow: visible;
   user-select: none;
   display: block;
@@ -42,9 +44,14 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  min-height: 300px;
-  flex: 1.5;
+  min-height: 300px; /* Basis-Höhe für Mobile */
+  flex: 1;
+
+  @media (min-width: 1024px) {
+    min-height: 900px; 
+  }
 }
+
 
 /* NEU: Container für die dauerhaft sichtbare Liste */
 .textList {
@@ -88,20 +95,22 @@
   letter-spacing: 0.2em; 
   text-transform: uppercase;
   transition: color 0.3s ease;
+  white-space: nowrap;    /* Auch für die kleinen Subtitles über den Haupttiteln */
 }
 
 /* Schriftgröße angepasst, da jetzt 4 Titel untereinander stehen (5rem war vorher etwas groß für alle) */
 .infoTitle {
-  font-size: 2.5rem; 
+  font-size: clamp(1.6rem, 2.4vw, 2.5rem); 
   line-height: 1.2;
   font-weight: 200; 
   text-transform: uppercase;
   letter-spacing: 0.2em;
   margin: 0;
   transform-origin: left center;
+  
+  white-space: nowrap;    
 }
 
-/* NEU: Container für die expandierenden Details */
 .expandedContent {
   overflow: hidden;
 }

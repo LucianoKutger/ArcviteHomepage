@@ -1,10 +1,19 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import styles from './MethodologySystem.module.scss';
-import {methodologySegments} from '../../data/content'
+import { methodologySegments } from '../../data/content';
 
 const ArcSystem = () => {
-  const [activeSegment, setActiveSegment] = useState(null);
+  // 1. Ersetzt activeSegment -> Steuert das INSTANTE Aufleuchten der Bögen/Titel
+  const [hoveredSegment, setHoveredSegment] = useState(null);
+  
+  // 2. Neu -> Steuert exklusiv das nacheinander geschaltete Ausfahren der Infotexte
+  const [activeContentId, setActiveContentId] = useState(null);
+
+  // 3. Neu -> Speichert die aktuelle Hover-ID für die Exit-Synchronisation
+  const latestHoveredIdRef = useRef(null);
+
+  // 4. Fix -> Wieder hinzugefügt für das Hover-Verhalten des "YOU"-Zentrums!
   const [isCenterHovered, setIsCenterHovered] = useState(false);
 
   // --- GEOMETRIE LOGIK ---
@@ -27,6 +36,34 @@ const ArcSystem = () => {
   const arrowStart = polarToCartesian(centerX, centerY, 580, 45);
   const arrowEnd = polarToCartesian(centerX, centerY, 15, 45);
   const polarStarPoint = polarToCartesian(centerX, centerY, 540, 45);
+
+  // --- ANIMATION CHAINING LOGIK ---
+  const handleMouseEnter = (segment) => {
+    latestHoveredIdRef.current = segment.id;
+    setHoveredSegment(segment);
+
+    if (activeContentId === null) {
+      // Wenn nichts offen ist, sofort ausfahren
+      setActiveContentId(segment.id);
+    } else if (activeContentId !== segment.id) {
+      // Wenn ein anderer Text offen ist, schließe ihn erst (setze auf null)
+      // Der neue Text wartet, bis handleExitComplete feuert
+      setActiveContentId(null);
+    }
+  };
+
+  const handleMouseLeave = () => {
+    latestHoveredIdRef.current = null;
+    setHoveredSegment(null);
+    setActiveContentId(null);
+  };
+
+  const handleExitComplete = () => {
+    // Diese Funktion wird ERST aufgerufen, wenn der alte Text vollständig unsichtbar eingezogen ist
+    if (latestHoveredIdRef.current !== null) {
+      setActiveContentId(latestHoveredIdRef.current);
+    }
+  };
 
   return (
     <div className={styles.container}>
@@ -52,30 +89,24 @@ const ArcSystem = () => {
           </defs>
 
           {/* Impact Flow Line */}
-         <g>
+          <g>
             <line x1={arrowStart.x} y1={arrowStart.y} x2={arrowEnd.x} y2={arrowEnd.y} stroke="white" strokeWidth="1.3" strokeOpacity="0.8" markerEnd="url(#arrow-to-center-bright)" />
-            
             <motion.line 
                 x1={arrowStart.x} y1={arrowStart.y} x2={arrowEnd.x} y2={arrowEnd.y} 
                 stroke="url(#flow-energy-white)" strokeLinecap="round" 
                 initial={{ pathLength: 0.15, pathOffset: -0.15, opacity: 0 }} 
                 animate={{ 
                     pathOffset: [-0.15, 1],
-                    // Startet unsichtbar -> Volle Leuchtkraft in der Mitte -> Endet unsichtbar
                     opacity: [0.5, 1, 0.5], 
-                    // Startet dünn -> Wird in der Mitte dicker -> Endet wieder dünn
                     strokeWidth: [2, 6, 2] 
                 }} 
                 transition={{ 
-                    // Die Bewegung bleibt konstant (linear)
                     pathOffset: { duration: 4, repeat: Infinity, ease: "linear" },
-                    // Das Aufleuchten (opacity & strokeWidth) schwillt organisch an und ab (easeInOut)
                     opacity: { duration: 4, repeat: Infinity, ease: "easeInOut" },
                     strokeWidth: { duration: 4, repeat: Infinity, ease: "easeInOut" }
                 }} 
                 style={{ filter: 'drop-shadow(0 0 6px rgba(255, 255, 255, 0.9))' }} 
             />
-            
             <text x={polarToCartesian(centerX, centerY, 600, 45).x + 12} y={polarToCartesian(centerX, centerY, 600, 45).y - 5} fill="white" fillOpacity="0.75" fontSize="10" letterSpacing="0.5em" className="uppercase italic font-extralight">Impact Flow</text>
           </g>
 
@@ -89,18 +120,18 @@ const ArcSystem = () => {
 
           {/* The Arcs (Stripes) */}
           {methodologySegments.map((s) => {
-            const isActive = activeSegment?.id === s.id;
-            const isInactive = activeSegment !== null && !isActive;
-            const r = isActive ? s.radius + 12 : s.radius; 
-            const t = isActive ? s.thickness * 1.6 : s.thickness; 
+            const isHovered = hoveredSegment?.id === s.id;
+            const isInactive = hoveredSegment !== null && !isHovered;
+            const r = isHovered ? s.radius + 12 : s.radius; 
+            const t = isHovered ? s.thickness * 1.6 : s.thickness; 
             
             return (
-                <g key={s.id} className="cursor-pointer group" onMouseEnter={() => setActiveSegment(s)} onMouseLeave={() => setActiveSegment(null)}>
-                    <path d={getPointyArcPath(s.radius, -5, 100, 110)} fill="transparent" className="pointer-events-auto" />
+                <g key={s.id} className="cursor-pointer group" onMouseEnter={() => handleMouseEnter(s)} onMouseLeave={handleMouseLeave}>
+                    <path d={getPointyArcPath(s.radius, -5, 100, s.thickness + 20)} fill="transparent" className="pointer-events-auto" />
                     <motion.path 
                         animate={{ d: getPointyArcPath(r, 10, 80, t), fillOpacity: isInactive ? 0.05 : 1 }} 
                         fill={`url(#grad-arc-${s.id})`} 
-                        style={{ filter: isActive ? 'url(#glow-model-meth)' : 'none' }} 
+                        style={{ filter: isHovered ? 'url(#glow-model-meth)' : 'none' }} 
                         transition={{ duration: 0.4 }} 
                     />
                 </g>
@@ -120,18 +151,17 @@ const ArcSystem = () => {
       {/* RECHTE SEITE: TEXT INFORMATION ALS LISTE */}
       <div className={styles.textWrapper}>
         <div className={styles.textList}>
-          {/* Wir drehen das Array um, damit "Dream" ganz oben in der Liste steht */}
           {[...methodologySegments].reverse().map((segment) => {
-            const isActive = activeSegment?.id === segment.id;
-            const isInactive = activeSegment !== null && !isActive;
+            const isHovered = hoveredSegment?.id === segment.id;
+            const isInactive = hoveredSegment !== null && !isHovered;
+            const isContentActive = activeContentId === segment.id;
 
             return (
               <motion.div 
                 key={segment.id}
                 className={`${styles.textListItem} ${isInactive ? styles.dimmedItem : ''}`}
-                onMouseEnter={() => setActiveSegment(segment)}
-                onMouseLeave={() => setActiveSegment(null)}
-                layout
+                onMouseEnter={() => handleMouseEnter(segment)}
+                onMouseLeave={handleMouseLeave}
               >
                 <div className={styles.headerRow}>
                   <div 
@@ -153,7 +183,7 @@ const ArcSystem = () => {
                 <motion.h2 
                   className={styles.infoTitle}
                   animate={{ 
-                    scale: isActive ? 1.05 : 1, 
+                    scale: isHovered ? 1.05 : 1, 
                     color: '#F0F4F8'
                   }}
                   style={{ originX: 0 }}
@@ -162,13 +192,16 @@ const ArcSystem = () => {
                   {segment.title}
                 </motion.h2>
                 
-                {/* Expandierende Details, wenn gehovert */}
-                <AnimatePresence>
-                  {isActive && (
+                {/* Hier übergeben wir handleExitComplete an AnimatePresence.
+                  Das garantiert, dass Framer Motion erst den Einzug beendet, bevor der neue State gesetzt wird.
+                */}
+                <AnimatePresence onExitComplete={handleExitComplete}>
+                  {isContentActive && (
                     <motion.div
                       initial={{ opacity: 0, height: 0, marginTop: 0 }}
                       animate={{ opacity: 1, height: 'auto', marginTop: '1rem' }}
                       exit={{ opacity: 0, height: 0, marginTop: 0 }}
+                      transition={{ duration: 0.3, ease: "easeInOut" }}
                       className={styles.expandedContent}
                     >
                       <p className={styles.infoDesc}>{segment.description}</p>
